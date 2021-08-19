@@ -35,7 +35,8 @@ const postSchema = new Schema(
     },
     {
         toJSON: {
-            virtuals: True
+            virtuals: true,
+            getters: true
         }
     }
 );
