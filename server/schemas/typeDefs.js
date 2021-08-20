@@ -6,9 +6,9 @@ const typeDefs = gql`
         _id: ID,
         username: String,
         email: String
-        posts: [Posts]
+        post: [Posts]
     }
-    type Post {
+    type Posts {
         _id: ID,
         subtitle: String,
         bodyText: String,
@@ -26,13 +26,13 @@ const typeDefs = gql`
         me: User
         users: (username: String!): User
         posts(username: String): [Posts]
-        posh(_id: ID!): Post
+        posh(_id: ID!): Posts
     }
     type Mutations {
         login(username: String!, password: String!)
         addUser(username: String, email: String!, password: String!)
         addPost(bodyText: String!): Posts
-        addComment(postsId: ID!, commentBody: String!): Post
+        addComment(postsId: ID!, commentBody: String!): Posts
 
     }
     type Auth {
