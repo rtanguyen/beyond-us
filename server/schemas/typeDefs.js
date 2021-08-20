@@ -1,5 +1,5 @@
 //import the GQL
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 //type def
 const typeDefs = gql`
     type User {
@@ -26,7 +26,7 @@ const typeDefs = gql`
         me: User
         users: (username: String!): User
         posts(username: String): [Posts]
-        posh(_id: ID!): Posts
+        post(_id: ID!): Posts
     }
     type Mutations {
         login(username: String!, password: String!)
@@ -36,9 +36,9 @@ const typeDefs = gql`
 
     }
     type Auth {
-        toke: ID!
+        token: ID!
         user: User
     }
-    `
+    `;
 //export
 module.exports = typeDefs;
