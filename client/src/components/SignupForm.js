@@ -29,60 +29,42 @@ const SignupForm = () => {
   };
 
   return (
-    <>
-      {/* This is needed for the validation functionality above */}
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-        {/* show alert if server response is bad */}
-        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-          Something went wrong with your signup!
-        </Alert>
-
-        <Form.Group>
-          <Form.Label htmlFor='username'>Username</Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Your username'
-            name='username'
-            onChange={handleInputChange}
-            value={userFormData.username}
-            required
-          />
-          <Form.Control.Feedback type='invalid'>Username is required!</Form.Control.Feedback>
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
-          <Form.Control
-            type='email'
-            placeholder='Your email address'
-            name='email'
-            onChange={handleInputChange}
-            value={userFormData.email}
-            required
-          />
-          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
-          <Form.Control
-            type='password'
-            placeholder='Your password'
-            name='password'
-            onChange={handleInputChange}
-            value={userFormData.password}
-            required
-          />
-          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
-        </Form.Group>
-        <Button
-          disabled={!(userFormData.username && userFormData.email && userFormData.password)}
-          type='submit'
-          variant='success'>
-          Submit
-        </Button>
-      </Form>
-    </>
+    <div className="col-3">            
+      <div className="card card-signUp">
+        <div className="card-body signUpForm rounded">
+          <p className="card-title text-center fs-4 fw-bold createTitle">Fill out the form below:</p>
+          <form className="login-form" onSubmit={handleFormSubmit}>
+            <div className="form-label-group">
+              <input type="text" id="username-login" className="form-control" placeholder="Username" required autofocus value={userFormData.username}
+                    onChange={handleInputChange}/>
+              <label htmlFor="username-login" className="fs-6 mt-1">Username</label>
+            </div>
+            <div className="form-label-group">
+              <input type="text" id="email-login" className="form-control" placeholder="Email Address" required autofocus value={userFormData.email}
+                    onChange={handleInputChange}/>
+              <label htmlFor="username-login" className="fs-6 mt-1">Email Address</label>
+            </div>
+            <div className="form-label-group mt-3">
+              <input type="password" id="password-login" className="form-control" placeholder="Password" required value={userFormData.password}
+                    onChange={handleInputChange}/>
+              <label htmlFor="password-login" className="fs-6 mt-1">Password</label>
+            </div>
+            <div className="container btnLogIn">
+              <div className="row">
+                <div className="col" />
+                <div className="col d-flex justify-content-end">
+                  <button className="btn btn-sm btn-outline-light logButton signUpCTA" type="submit"><a href="#" className="submitBut nav-link text-light">Submit</a></button>
+                </div>
+              </div>
+            </div>
+            <hr className="my-4" />
+            <div className="createAccountForm mb-3 d-flex justify-content-end">
+              <p>Already a member?</p><Link to='/login' className='d-block text-center mt-2 small goCreateAccount'>Login</Link>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 };
 

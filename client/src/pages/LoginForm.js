@@ -1,12 +1,13 @@
 // see SignupForm.js for comments
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 
 const LoginForm = () => {
-  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
-  const [validated] = useState(false);
-  const [showAlert, setShowAlert] = useState(false);
+  const [userFormData, setUserFormData] = useState({ username: '', password: '' });
+  // const [validated] = useState(false);
+  // const [showAlert, setShowAlert] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -40,7 +41,6 @@ const LoginForm = () => {
 
     setUserFormData({
       username: '',
-      email: '',
       password: '',
     });
   };
@@ -56,24 +56,25 @@ const LoginForm = () => {
                 <form className="login-form" onSubmit={handleFormSubmit}>
                   <div className="form-label-group">
                     <input type="text" id="username-login" className="form-control" placeholder="Username" value={userFormData.username}
-                    onChange={handleFormSubmit} required autofocus/>
+                    onChange={handleInputChange} required autofocus/>
                     <label htmlFor="username-login" className="fs-6 mt-1">Username</label>
                   </div>
                   <div className="form-label-group mt-3">
-                    <input type="password" id="password-login" className="form-control" placeholder="Password" required value={userFormData.password} onChange={handleFormSubmit}/>
+                    <input type="password" id="password-login" className="form-control" placeholder="Password" required value={userFormData.password} onChange={handleInputChange}/>
                     <label htmlFor="password-login" className="fs-6 mt-1">Password</label>
                   </div>
                   <div className="container btnLogIn">
                     <div className="row">
                       <div className="col" />
                       <div className="col d-flex justify-content-end">
-                        <button className="btn btn btn-outline-dark btn-med signInCTA" type="submit">Log in</button>
+                        <button className="btn btn btn-outline-dark btn-med signInCTA" type="submit"><Link to='/login'>Login</Link></button>
                       </div>
                     </div>
                   </div>
                   <hr className="my-4" />
                   <div className="loginCreateAccount mb-3 d-flex justify-content-end">
-                    <p>New around here?<a className="d-block text-center mt-2 small goCreateAccount" href="index.html">Create your account</a></p>
+                    <p>New around here?</p>
+                    <Link to='/landing'>Create your account</Link>
                   </div>
                 </form>
               </div>
