@@ -2,6 +2,12 @@ import React from "react";
 import Auth from "../utils/auth";
 import PrelogHeader from "../components/PrelogHeader";
 import SignupForm from "../components/SignupForm";
+import saveChild from "../assets/savethechildren.jpg"
+import communityImg from "../assets/community2.jpg"
+import volunteerImg from "../assets/volunteerhero.jpg"
+import animalImg from "../assets/animalrights1.jpg"
+import protectAfghanImg from "../assets/protectafgans2.jpg"
+import wildfireImg from "../assets/wilefire.jpg"
 
 const Landing = () => {
   return (
@@ -43,7 +49,7 @@ const Landing = () => {
                     </div>
                     <div className="col-4">
                       <img
-                        src="assets/img/savethechildren.jpg"
+                        src={saveChild}
                         className="img-fluid"
                         alt="Responsive image"
                       />
@@ -70,7 +76,7 @@ const Landing = () => {
               <div className="col-2" />
               <div className="col-3">
                 <img
-                  src="assets/img/community2.jpg"
+                  src={communityImg}
                   className="img-fluid"
                   alt="Responsive image"
                 />
@@ -111,7 +117,7 @@ const Landing = () => {
               </div>
               <div className="col-3">
                 <img
-                  src="assets/img/volunteerhero.jpg"
+                  src={volunteerImg}
                   className="img-fluid"
                   alt="Responsive image"
                 />
@@ -145,7 +151,7 @@ const Landing = () => {
                   <div className="carousel-inner">
                     <div className="carousel-item active">
                       <img
-                        src="./assets/img/animalrights1.jpg"
+                        src={animalImg}
                         className="d-block w-100"
                         alt="..."
                       />
@@ -155,7 +161,7 @@ const Landing = () => {
                     </div>
                     <div className="carousel-item">
                       <img
-                        src="./assets/img/protectafgans2.jpg"
+                        src={protectAfghanImg}
                         className="d-block w-100"
                         alt="..."
                       />
@@ -165,7 +171,7 @@ const Landing = () => {
                     </div>
                     <div className="carousel-item">
                       <img
-                        src="./assets/img/wilefire.jpg"
+                        src={wildfireImg}
                         className="d-block w-100"
                         alt="..."
                       />
@@ -205,7 +211,22 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <SignupForm />
+
+      {/* Sign Up*/}
+      <div className="joinUs mt-5 mb-5" id="jointhecause">
+        <div className="container joinUsTitle">
+          <div className="row">
+            <div className="col-1" />
+            <div className="col-6">            
+              <h2>Join the Cause</h2>
+              <p>Sign up and join everyday heroes around the world to keep up with what is happening on our planet and how we can help combat and protect the future. You will gain access to our feed filled with trending topics that need your help today. Access non-profits and see where you can make a difference. <br /> <br />Today is a good day to start making a postive impact on lives that needs a helping hand and a world that needs us to save.  <br /><br /><span className="fw-bold">Together we can.</span></p>
+            </div>
+            <div className="col-1" />
+            <SignupForm />
+            <div className="col-1" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -43,22 +43,7 @@ const SignupForm = () => {
             Fill out the form below:
           </p>
           <form className="login-form" onSubmit={handleFormSubmit}>
-            <div className="form-label-group">
-              <input
-                type="text"
-                id="username-login"
-                className="form-control"
-                placeholder="Username"
-                required
-                autofocus
-                value={userFormData.username}
-                onChange={handleInputChange}
-              />
-              <label htmlFor="username-login" className="fs-6 mt-1">
-                Username
-              </label>
-            </div>
-            <div className="form-label-group">
+          <div className="form-label-group mt-3">
               <input
                 type="text"
                 id="email-login"
@@ -71,6 +56,22 @@ const SignupForm = () => {
               />
               <label htmlFor="username-login" className="fs-6 mt-1">
                 Email Address
+              </label>
+            </div>
+            <hr className="my-4" />
+            <div className="form-label-group">
+              <input
+                type="text"
+                id="username-login"
+                className="form-control"
+                placeholder="Username"
+                required
+                autofocus
+                value={userFormData.username}
+                onChange={handleInputChange}
+              />
+              <label htmlFor="username-login" className="fs-6 mt-1 mb-1">
+                Username
               </label>
             </div>
             <div className="form-label-group mt-3">
@@ -105,12 +106,11 @@ const SignupForm = () => {
             <hr className="my-4" />
             <div className="createAccountForm mb-3 d-flex justify-content-end">
               <p>Already a member?</p>
+              <p className="d-block text-center mt-2 small goCreateAccount">
               <Link
-                to="/login"
-                className="d-block text-center mt-2 small goCreateAccount"
-              >
+                to="/login">
                 Login
-              </Link>
+              </Link></p>
             </div>
           </form>
         </div>
