@@ -33,7 +33,6 @@ const typeDefs = gql`
         addUser(username: String, email: String!, password: String!)
         addPost(bodyText: String!): Posts
         addComment(postsId: ID!, commentBody: String!): Posts
-
     }
     type Auth {
         token: ID!
