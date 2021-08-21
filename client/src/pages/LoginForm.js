@@ -1,13 +1,12 @@
 // see SignupForm.js for comments
 import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import { Form, Button, Alert } from 'react-bootstrap';
 import Auth from '../utils/auth';
 
 const LoginForm = () => {
-  const [userFormData, setUserFormData] = useState({ username: '', password: '' });
-
-  const [login, { error }] = useMutation(LOGIN_USER);
+  const [userFormData, setUserFormData] = useState({ email: '', password: '' });
+  const [validated] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -17,57 +16,73 @@ const LoginForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    try {
-      const { data } = await login({
-        variables: { ...formState }
-      });
-      console.log(data);
-      Auth.login(data.login.token);
-    } catch(e) {
-      console.error(e);
+    // check if form has everything (as per react-bootstrap docs)
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
     }
-  };  
+
+    try {
+      const response = await loginUser(userFormData);
+
+      if (!response.ok) {
+        throw new Error('something went wrong!');
+      }
+
+      const { token, user } = await response.json();
+      console.log(user);
+      Auth.login(token);
+    } catch (err) {
+      console.error(err);
+      setShowAlert(true);
+    }
+
+    setUserFormData({
+      username: '',
+      email: '',
+      password: '',
+    });
+  };
 
   return (
-    <>
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-        <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-          Something went wrong with your login credentials!
-        </Alert>
-        <Form.Group>
-          <Form.Label htmlFor='email'>Email</Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Your email'
-            name='email'
-            onChange={handleInputChange}
-            value={userFormData.email}
-            required
-          />
-          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
-        </Form.Group>
-
-        <Form.Group>
-          <Form.Label htmlFor='password'>Password</Form.Label>
-          <Form.Control
-            type='password'
-            placeholder='Your password'
-            name='password'
-            onChange={handleInputChange}
-            value={userFormData.password}
-            required
-          />
-          <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
-        </Form.Group>
-        <Button
-          disabled={!(userFormData.email && userFormData.password)}
-          type='submit'
-          variant='success'>
-          Submit
-        </Button>
-      </Form>
-    </>
-  );
-};
+      <div className="container login">
+        <div className="row">
+          <div className="col-4" />
+          <div className="col-4">
+            <div className="card card-signin my-5">
+              <div className="card-body loginForm">
+                <h5 className="card-title text-center fs-2 fw-bold">Sign in</h5>
+                <form className="login-form" onSubmit={handleFormSubmit}>
+                  <div className="form-label-group">
+                    <input type="text" id="username-login" className="form-control" placeholder="Username" value={userFormData.username}
+                    onChange={handleFormSubmit} required autofocus/>
+                    <label htmlFor="username-login" className="fs-6 mt-1">Username</label>
+                  </div>
+                  <div className="form-label-group mt-3">
+                    <input type="password" id="password-login" className="form-control" placeholder="Password" required value={userFormData.password} onChange={handleFormSubmit}/>
+                    <label htmlFor="password-login" className="fs-6 mt-1">Password</label>
+                  </div>
+                  <div className="container btnLogIn">
+                    <div className="row">
+                      <div className="col" />
+                      <div className="col d-flex justify-content-end">
+                        <button className="btn btn btn-outline-dark btn-med signInCTA" type="submit">Log in</button>
+                      </div>
+                    </div>
+                  </div>
+                  <hr className="my-4" />
+                  <div className="loginCreateAccount mb-3 d-flex justify-content-end">
+                    <p>New around here?<a className="d-block text-center mt-2 small goCreateAccount" href="index.html">Create your account</a></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div className="col-4" />
+        </div>
+      </div>
+    );
+  };
 
 export default LoginForm;
