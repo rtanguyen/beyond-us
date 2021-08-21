@@ -1,5 +1,6 @@
 import React from 'react';
 import LogoPic from '../assets/BU-Logo_Beyond Us.png';
+import '../'
 const Nav = (props)=> {
     const { pages=[], setCurrentPage, currentPage } = props;
 
