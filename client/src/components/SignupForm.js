@@ -36,59 +36,30 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="col-3">
-      <div className="card card-signUp">
-        <div className="card-body signUpForm rounded">
-          <p className="card-title text-center fs-4 fw-bold createTitle">
-            Fill out the form below:
-          </p>
-          <form className="login-form" onSubmit={handleFormSubmit}>
-          <div className="form-label-group mt-3">
-              <input
-                type="text"
-                id="email-login"
-                className="form-control"
-                placeholder="Email Address"
-                required
-                autofocus
-                value={userFormData.email}
-                onChange={handleInputChange}
-              />
-              <label htmlFor="username-login" className="fs-6 mt-1">
-                Email Address
-              </label>
-            </div>
-            <hr className="my-4" />
-            <div className="form-label-group">
-              <input
-                type="text"
-                id="username-login"
-                className="form-control"
-                placeholder="Username"
-                required
-                autofocus
-                value={userFormData.username}
-                onChange={handleInputChange}
-              />
-              <label htmlFor="username-login" className="fs-6 mt-1 mb-1">
-                Username
-              </label>
-            </div>
-            <div className="form-label-group mt-3">
-              <input
-                type="password"
-                id="password-login"
-                className="form-control"
-                placeholder="Password"
-                required
-                value={userFormData.password}
-                onChange={handleInputChange}
-              />
-              <label htmlFor="password-login" className="fs-6 mt-1">
-                Password
-              </label>
-            </div>
-            <div className="container btnLogIn">
+          <div classname="container">
+            <div className="card card-signUp">
+              <div className="card-body signUpForm rounded">
+                <p className="card-title text-center fs-4 fw-bold createTitle">
+                Fill out the form below:
+                </p>
+                <form className="login-form" onSubmit={handleFormSubmit}>
+                <div>
+                  <div className="mb-3">
+                    <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
+                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="xyz@gmail.com" value={userFormData.email}
+                onChange={handleInputChange}/>
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="exampleFormControlInput1" className="form-label">Username</label>
+                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="username" value={userFormData.username}
+                onChange={handleInputChange}/>
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="exampleFormControlInput1" className="form-label">Password</label>
+                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Test1234" value={userFormData.password}
+                onChange={handleInputChange}/>
+                  </div>
+                  <div className="container btnLogIn">
               <div className="row">
                 <div className="col" />
                 <div className="col d-flex justify-content-end">
@@ -112,7 +83,8 @@ const SignupForm = () => {
                 Login
               </Link></p>
             </div>
-          </form>
+                </div>
+            </form>
         </div>
       </div>
     </div>

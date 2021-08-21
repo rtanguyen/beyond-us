@@ -18,7 +18,7 @@ const Landing = () => {
         <div className="mainJumbo mb-5">
           <div className="container jumbo-container">
             <div className="row">
-              <div className="col-1" />
+              <div className="col-1"></div>
               <div className="col-10">
                 <div className="container mt-4">
                   <div className="row">

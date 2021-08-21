@@ -1,5 +1,11 @@
 import React from 'react'
-import afghan1Img from '../../src/assets//protextafgans.jpg' 
+import afghan1Img from '../assets/protextafgans.jpg' 
+import covidImg1 from '../assets/covid3.jpg'
+import haitiImg from '../assets/haiti1.jpg'
+import climateChangeImg from '../assets/climatechange3.jpg'
+import afghanImg2 from '../assets/afghan.jpg'
+import covidImg2 from '../assets/covid2.jpg'
+import haitiImg3 from '../assets/haiti4.jpg'
 
 function Dashboard() {
     return (
@@ -128,7 +134,7 @@ function Dashboard() {
                   <div className="col-7 pl-2 pr-2">
                     <div>
                       <div className="card" style={{width: '100%'}}>
-                        <img src={require('../../src/assets//protextafgans.jpg').default} className="card-img-top" alt="Afghans image" />
+                        <img src={afghan1Img} className="card-img-top" alt="Afghans image" />
                         <div className="card-body">
                           <h5 className="card-title">Help save Afghans</h5>
                           <p className="card-text">As the Taliban has breached the capital city of Kabul, thousands of Afghans are fighting to find a way out. Humanitarians and soldiers on the ground are doing what they can, but here is our oppurtunity to help save hundreds of lives. Read more on the efforts to get planes on the ground to bring Afghans to safety. 
@@ -151,7 +157,7 @@ function Dashboard() {
                               </div> */}
                     <div className="my-4">
                       <div className="card mt-3" style={{width: '100%'}}>
-                        <img src="./assets/img/covid3.jpg" className="card-img-top" alt="..." />
+                        <img src={covidImg1} className="card-img-top" alt="..." />
                         <div className="card-body">
                           <h5 className="card-title">COVID-19: Global Pandemic</h5>
                           <p className="card-text">As we battle our everyday stresses, we are also at war with a contagion that has sweep across the globe. Medical workers are working endless hours to help protect us. Here's how we can help prevent the spread.</p>
@@ -163,7 +169,7 @@ function Dashboard() {
                     </div>
                     <div className="my-4">
                       <div className="card mt-3" style={{width: '100%'}}>
-                        <img src="./assets/img/haiti1.jpg" className="card-img-top" alt="..." />
+                        <img src={haitiImg} className="card-img-top" alt="..." />
                         <div className="card-body">
                           <h5 className="card-title">Catostophic earthquake struck Haiti</h5>
                           <p className="card-text">Haiti was recently hit by a 7.2 magnitude earthquake leaving over a thousand Haitians and counting dead. As rescue efforts are in progress, survivors, many left without homes and any possesions, are in search of aid, food, and supplies.</p>
@@ -185,7 +191,7 @@ function Dashboard() {
                           </div> */}
                     <div className="my-4">
                       <div className="card mt-3" style={{width: '100%'}}>
-                        <img src="./assets/img/climatechange3.jpg" className="card-img-top" alt="..." />
+                        <img src={climateChangeImg} className="card-img-top" alt="..." />
                         <div className="card-body">
                           <h5 className="card-title">Climate Change</h5>
                           <p className="card-text">Our world is telling us that things are changing for the worst. As ice caps melts, deforestation continues, and the heat level around the world rise, we must find way to help planet Earth.</p>
@@ -212,35 +218,35 @@ function Dashboard() {
                     <hr />
                     <p className="text-center">Twitter</p>
                     <p className="text-center">
-                      <a href="https://twitter.com/search?q=%23saveAfghans&src=typed_query">#saveAfghans</a>
+                      <a href="https://twitter.com/search?q=%23saveAfghans">#saveAfghans</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23Kabul&src=typed_query">#Kabul</a>
+                      <a href="https://twitter.com/search?q=%23Kabul">#Kabul</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23Afghanistan&src=typed_query">#Afghanistan</a>
+                      <a href="https://twitter.com/search?q=%23Afghanistan">#Afghanistan</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23taliban&src=typed_query">#taliban</a>
+                      <a href="https://twitter.com/search?q=%23taliban">#taliban</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23support&src=typed_query">#support</a>
+                      <a href="https://twitter.com/search?q=%23support">#support</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23america&src=typed_query">#america</a>
+                      <a href="https://twitter.com/search?q=%23america">#america</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23saveAfghans&src=typed_query">#saveAfghans</a>
+                      <a href="https://twitter.com/search?q=%23saveAfghans">#saveAfghans</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23kabulafghanistan&src=typed_que">#kabulafghanistan</a>
+                      <a href="https://twitter.com/search?q=%23kabulafghanistan">#kabulafghanistan</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23peace&src=typed_query">#peace</a>
+                      <a href="https://twitter.com/search?q=%23peace">#peace</a>
                       <br />
                       <a href="https://twitter.com/search?q=%23covid19">#Covid19</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23Coronavirus&src=typed_query">#Coronavirus</a>
+                      <a href="https://twitter.com/search?q=%23Coronavirus">#Coronavirus</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23Covid&src=typed_query">#covid</a>
+                      <a href="https://twitter.com/search?q=%23Covid">#covid</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23ClimateStrike&src=typeahead_click">#ClimateStrike</a>
+                      <a href="https://twitter.com/search?q=%23ClimateStrike">#ClimateStrike</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23ClimateCrisis&src=typeahead_click">#ClimateCrisis</a>
+                      <a href="https://twitter.com/search?q=%23ClimateCrisis">#ClimateCrisis</a>
                       <br />
-                      <a href="https://twitter.com/search?q=%23climatechange&src=typed_query">#climatechange</a>
+                      <a href="https://twitter.com/search?q=%23climatechange">#climatechange</a>
                       <br />
                     </p>
                     <br />
@@ -248,7 +254,7 @@ function Dashboard() {
                     <hr />
                     <div className="my-3">
                       <div className="card" style={{width: '15rem'}}>
-                        <img src="./assets/img/afghan.jpg" className="card-img-top" alt="..." />
+                        <img src={afghanImg2} className="card-img-top" alt="..." />
                         <div className="card-body">
                           <p className="card-text text-center text-uppercase"><a href="https://www.nytimes.com/live/2021/08/17/world/taliban-afghanistan-news" className="sm">Fearful people of Afghanistan in search of a way out</a></p>
                         </div>
@@ -256,7 +262,7 @@ function Dashboard() {
                     </div>
                     <div className="my-3">
                       <div className="card mt=3" style={{width: '15rem'}}>
-                        <img src="./assets/img/covid2.jpg" className="card-img-top" alt="..." />
+                        <img src={covidImg2} className="card-img-top" alt="..." />
                         <div className="card-body">
                           <p className="card-text text-center text-uppercase"><a href="https://www.nytimes.com/live/2021/08/20/world/covid-delta-variant-vaccine" className="sm">F.D.A approved Pfizer on the way</a></p>
                         </div>
@@ -264,7 +270,7 @@ function Dashboard() {
                     </div>
                     <div className="my-3">
                       <div className="card mt=3" style={{width: '15rem'}}>
-                        <img src="./assets/img/haiti4.jpg" className="card-img-top" alt="..." />
+                        <img src={haitiImg3} className="card-img-top" alt="..." />
                         <div className="card-body">
                           <p className="card-text text-center text-uppercase"><a href="https://www.npr.org/2021/08/20/1029921352/haitian-quake-victims-rush-aid-sites-and-take-food-and-supplies" className="sm">Haitian quake survivors in need of aid</a></p>
                         </div>
