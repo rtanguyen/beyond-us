@@ -27,7 +27,12 @@ hr {
 
 /* Nav Bar styles */
 button a {
-  color: #f8f9fa !important;
+  color: #f8f9fa;
+}
+
+.signInCTA {
+  background-color: #32a7ad;
+  border: 0;
 }
 
 .logoNav {
