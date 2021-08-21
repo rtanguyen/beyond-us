@@ -12,6 +12,7 @@ import { setContext } from "@apollo/client/link/context";
 import "./App.css";
 import Nav from "./components/Nav";
 import Landing from "./pages/Landing";
+import Login from "./pages/LoginForm";
 import Dashboard from "./pages/Dashboard";
 
 const httpLink = createHttpLink({
@@ -49,6 +50,7 @@ function App() {
         <div>
           <Switch>
             <Route exact path="/" component={Landing} />
+            <Route exact path="/login" component={Login} />
             <Route exact path="/home" component={Dashboard} />
           </Switch>
         </div>
