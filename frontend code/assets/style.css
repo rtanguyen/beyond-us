@@ -69,8 +69,8 @@ hr {
     color: #000000;
 }
 
-.footsies {
+/* .footsies {
     @include media-breakpoint-up(sm) {
             width: 6rem;
     }
-}   
+}    */
