@@ -8,7 +8,7 @@ const PrelogHeader = () => {
       <div className="container-fluid nav-container">
         <div className="col-1" />
         <div className="col-4">
-          <a className="navbar-brand mainLogo" href="#"><img src="BU-Logo_Beyond Us.png" className="logoNav" style={{width: '10%'}} /></a>
+          <a className="navbar-brand mainLogo" href="#"><img src={LogoPic} className="logoNav" style={{width: '10%'}} /></a>
         </div>
         <div className="col-2" />
         <div className="col-3">
