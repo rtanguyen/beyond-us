@@ -1,6 +1,7 @@
 import React from 'react';
-
+import LogoPic from '../assets/BU-Logo_Beyond Us.png';
 const Nav = (props)=> {
+    const { pages=[], setCurrentPage, currentPage } = props;
 
       return (
         <div>
@@ -10,7 +11,7 @@ const Nav = (props)=> {
                 <div className="container-fluid nav-container">
                   <div className="col-1" />
                   <div className="col-4">
-                    <a className="navbar-brand mainLogo" href="#"><img src="BU-Logo_Beyond Us.png" className="logoNav" style={{width: '10%'}} /></a>
+                    <img src={LogoPic} className="navbar-brand mainLogologoNav" href="#" alt ='logo'></img>
                   </div>
                   <div className="col-2" />
                   <div className="col-3">
@@ -18,7 +19,19 @@ const Nav = (props)=> {
                       <span className="navbar-toggler-icon" />
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavDropdownLeft">
-                      <ul className="navbar-nav">
+                      <ul className='navbar-nav'>
+                          {pages.map((page) => (
+                              <li key={page}>
+                                  <span className={`nav-item ${
+                                    currentPage.name ===page.name&&'navActive'}`}
+                                onClick={()=> setCurrentPage(page)}>
+                                    {page.name}
+                                    </span>
+                              </li>
+                          ))}
+                      </ul>
+                      
+                     {/*} <ul className="navbar-nav">
                         <li className="nav-item">
                           <a className="nav-link" aria-current="page" href="#ourmission">Our Mission</a>
                         </li>
@@ -28,10 +41,10 @@ const Nav = (props)=> {
                         <li className="nav-item">
                           <a className="nav-link" href="#jointhecause">Join the Cause</a>
                         </li>
-                        {/* <li class="nav-item login">
+                         <li class="nav-item login">
                     <button type="button" class="btn btn-outline-light logButton btn-sm"><a class="nav-link text-light" href="#">Log In</a></button>
                   </li> */}
-                      </ul>
+    
                     </div>
                   </div>
                   <div className="col-1"><button type="button" className="btn btn-outline-light logButton btn-sm"><a className="nav-link text-light" href="login.html">Log In</a></button></div>
