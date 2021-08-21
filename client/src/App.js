@@ -3,6 +3,8 @@ import './App.css';
 import Nav from './components/Nav';
 
 
+
+
 function App() {
   const [pages] = useState([
     {name: 'Our Mission'},
