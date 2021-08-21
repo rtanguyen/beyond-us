@@ -4,7 +4,7 @@ import covidImg1 from '../assets/covid3.jpg'
 import haitiImg from '../assets/haiti1.jpg'
 import climateChangeImg from '../assets/climatechange3.jpg'
 import afghanImg2 from '../assets/afghan.jpg'
-import covidImg2 from '..assets/covidImg2'
+import covidImg2 from '../assets/covid2.jpg'
 import haitiImg3 from '../assets/haiti4.jpg'
 
 function Dashboard() {
