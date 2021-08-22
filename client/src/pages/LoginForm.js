@@ -20,19 +20,21 @@ const LoginForm = (props) => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
+    console.log(name, value);
     setUserFormData({ ...userFormData, [name]: value });
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+    console.log(userFormData);
     try {
-      const response = await login({
+      const {data} = await login({
         variables: { ...userFormData },
       });
-      const { token, user } = await response.json();
+      console.log(data);
+      const { token, user } = data.login;
       console.log(user);
-      // Auth.login(token);
+      Auth.login(token);
     } catch (err) {
       console.error(err);
       // setShowAlert(true);
@@ -60,7 +62,8 @@ const LoginForm = (props) => {
                     className="form-control"
                     placeholder="Username"
                     defaultValue={username}
-                    onBlur={handleInputChange}
+                    name="username"
+                    onChange={handleInputChange}
                     required
                     autofocus
                   />
@@ -75,8 +78,9 @@ const LoginForm = (props) => {
                     className="form-control"
                     placeholder="Password"
                     required
+                    name="password"
                     defaultValue={password}
-                    onBlur={handleInputChange}
+                    onChange={handleInputChange}
                   />
                   <label htmlFor="password-login" className="fs-6 mt-1">
                     Password
