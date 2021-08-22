@@ -11,6 +11,8 @@ const LoginForm = (props) => {
     username: "",
     password: "",
   });
+
+  const { username, password } = userFormData;
   // const [validated] = useState(false);
   // const [showAlert, setShowAlert] = useState(false);
 
@@ -24,33 +26,22 @@ const LoginForm = (props) => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    // const form = event.currentTarget;
-    // if (form.checkValidity() === false) {
-    //   event.preventDefault();
-    //   event.stopPropagation();
-    // }
-
     try {
       const response = await login({
-        variables: { userFormData },
+        variables: { ...userFormData },
       });
-
-      if (!response.ok) {
-        throw new Error("something went wrong!");
-      }
-
       const { token, user } = await response.json();
       console.log(user);
-      Auth.login(token);
+      // Auth.login(token);
     } catch (err) {
       console.error(err);
       // setShowAlert(true);
     }
 
-    setUserFormData({
-      username: "",
-      password: "",
-    });
+    // setUserFormData({
+    //   username: "",
+    //   password: "",
+    // });
   };
 
   return (
@@ -68,8 +59,8 @@ const LoginForm = (props) => {
                     id="username-login"
                     className="form-control"
                     placeholder="Username"
-                    value={userFormData.username}
-                    onChange={handleInputChange}
+                    defaultValue={username}
+                    onBlur={handleInputChange}
                     required
                     autofocus
                   />
@@ -84,13 +75,15 @@ const LoginForm = (props) => {
                     className="form-control"
                     placeholder="Password"
                     required
-                    value={userFormData.password}
-                    onChange={handleInputChange}
+                    defaultValue={password}
+                    onBlur={handleInputChange}
                   />
                   <label htmlFor="password-login" className="fs-6 mt-1">
                     Password
                   </label>
                 </div>
+                {error && <div>Login failed</div>}
+
                 <div className="container btnLogIn">
                   <div className="row">
                     <div className="col" />
@@ -99,7 +92,8 @@ const LoginForm = (props) => {
                         className="btn btn btn-outline-dark btn-med signInCTA"
                         type="submit"
                       >
-                        <Link to="/login">Login</Link>
+                        Log in
+                        {/* <Link to="/dashboard">Login</Link> */}
                       </button>
                     </div>
                   </div>
