@@ -11,6 +11,8 @@ const LoginForm = (props) => {
     username: "",
     password: "",
   });
+
+  const { username, password } = userFormData;
   // const [validated] = useState(false);
   // const [showAlert, setShowAlert] = useState(false);
 
@@ -18,28 +20,19 @@ const LoginForm = (props) => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
+    console.log(name, value);
     setUserFormData({ ...userFormData, [name]: value });
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    // const form = event.currentTarget;
-    // if (form.checkValidity() === false) {
-    //   event.preventDefault();
-    //   event.stopPropagation();
-    // }
-
+    console.log(userFormData);
     try {
-      const response = await login({
-        variables: { userFormData },
+      const {data} = await login({
+        variables: { ...userFormData },
       });
-
-      if (!response.ok) {
-        throw new Error("something went wrong!");
-      }
-
-      const { token, user } = await response.json();
+      console.log(data);
+      const { token, user } = data.login;
       console.log(user);
       Auth.login(token);
     } catch (err) {
@@ -47,10 +40,10 @@ const LoginForm = (props) => {
       // setShowAlert(true);
     }
 
-    setUserFormData({
-      username: "",
-      password: "",
-    });
+    // setUserFormData({
+    //   username: "",
+    //   password: "",
+    // });
   };
 
   return (
@@ -68,7 +61,8 @@ const LoginForm = (props) => {
                     id="username-login"
                     className="form-control"
                     placeholder="Username"
-                    value={userFormData.username}
+                    defaultValue={username}
+                    name="username"
                     onChange={handleInputChange}
                     required
                     autofocus
@@ -84,13 +78,16 @@ const LoginForm = (props) => {
                     className="form-control"
                     placeholder="Password"
                     required
-                    value={userFormData.password}
+                    name="password"
+                    defaultValue={password}
                     onChange={handleInputChange}
                   />
                   <label htmlFor="password-login" className="fs-6 mt-1">
                     Password
                   </label>
                 </div>
+                {error && <div>Login failed</div>}
+
                 <div className="container btnLogIn">
                   <div className="row">
                     <div className="col" />
@@ -99,7 +96,8 @@ const LoginForm = (props) => {
                         className="btn btn btn-outline-dark btn-med signInCTA"
                         type="submit"
                       >
-                        <Link to="/login">Login</Link>
+                        Log in
+                        {/* <Link to="/dashboard">Login</Link> */}
                       </button>
                     </div>
                   </div>
