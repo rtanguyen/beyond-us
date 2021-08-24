@@ -216,7 +216,7 @@ const Landing = () => {
       <div className="joinUs mt-5 mb-5" id="jointhecause">
         <div className="container joinUsTitle">
           <div className="row">
-            <div className="col-1" />
+            {/* <div className="col-1" /> */}
             <div className="col-6">
               <h2>Join the Cause</h2>
               <p>
@@ -233,9 +233,9 @@ const Landing = () => {
                 <span className="fw-bold">Together we can.</span>
               </p>
             </div>
-            <div className="col-1" />
+            {/* <div className="col-1" /> */}
             <SignupForm />
-            <div className="col-1" />
+            {/* <div className="col-1" /> */}
           </div>
         </div>
       </div>
