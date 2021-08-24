@@ -47,7 +47,7 @@ const Landing = () => {
                         </button>
                       </p>
                     </div>
-                    <div className="col-4">
+                    <div className="col-6">
                       <img
                         src={saveChild}
                         className="img-fluid"
@@ -235,7 +235,7 @@ const Landing = () => {
             </div>
             {/* <div className="col-1" /> */}
             <SignupForm />
-            {/* <div className="col-1" /> */}
+            <div className="col-1" />
           </div>
         </div>
       </div>
