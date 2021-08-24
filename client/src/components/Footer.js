@@ -23,12 +23,12 @@ const Footer = () => {
         <div className="row text-center">
           <div className="col-2 fw-bold footsies" />
           <div className="col-2 footsm footsies">
-            <a className="sm" href="#">
+            <a className="sm" href="#urgentcauses">
               Urgent Causes
             </a>
           </div>
           <div className="col-2 footsm footsies">
-            <a className="sm" href="#">
+            <a className="sm" href="#ourmission">
               Our Mission
             </a>
           </div>
@@ -79,7 +79,7 @@ const Footer = () => {
         <div className="row text-center">
           <div className="col-2 fw-bold footsies" />
           <div className="col-2 footsm footsies">
-            <a className="sm" href="#">
+            <a className="sm" href="#signup">
               Sign Up
             </a>
           </div>
