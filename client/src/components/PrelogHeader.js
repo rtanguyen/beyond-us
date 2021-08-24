@@ -43,8 +43,8 @@ const PrelogHeader = () => {
                   Join the Cause
                 </a>
               </li>
-              {/* <li class="nav-item login">
-                <button type="button" class="btn btn-outline-light logButton btn-sm"><a class="nav-link text-light" href="#">Log In</a></button>
+              {/* <li className="nav-item login">
+                <button type="button" className="btn btn-outline-light logButton btn-sm"><a className="nav-link text-light" href="#">Log In</a></button>
               </li> */}
             </ul>
           </div>

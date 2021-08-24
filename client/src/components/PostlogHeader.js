@@ -29,7 +29,11 @@ const PostlogHeader = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdownLeft">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#happeningnow">
+                <a
+                  className="nav-link"
+                  aria-current="page"
+                  href="#happeningnow"
+                >
                   Happening Now
                 </a>
               </li>
@@ -43,8 +47,8 @@ const PostlogHeader = () => {
                   News
                 </a>
               </li>
-              {/* <li class="nav-item login">
-                <button type="button" class="btn btn-outline-light logButton btn-sm"><a class="nav-link text-light" href="#">Log In</a></button>
+              {/* <li className="nav-item login">
+                <button type="button" className="btn btn-outline-light logButton btn-sm"><a className="nav-link text-light" href="#">Log In</a></button>
               </li> */}
             </ul>
           </div>

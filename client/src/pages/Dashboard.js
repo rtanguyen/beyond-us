@@ -8,8 +8,8 @@ import covidImg2 from "../assets/covid2.jpg";
 import haitiImg3 from "../assets/haiti4.jpg";
 import PostlogHeader from "../components/PostlogHeader";
 import post from "../assets/postSeed";
-import {Link} from 'react-router-dom';
-
+import donate from "../assets/donateSeed";
+import { Link } from "react-router-dom";
 
 function Dashboard() {
   return (
@@ -218,28 +218,55 @@ function Dashboard() {
               </ul>
             </div>
             <div className="col-7 pl-2 pr-2">
-
-                    {post.map(post => (
-              <div key={post._id}>
-              <div className="card" style={{ width: "100%" }}>
+              {post.map((post) => (
+                <div key={post._id}>
+                  <div className="card" style={{ width: "100%" }}>
                     <img
-                    src={post.image}
-                    className="card-img-top"
-                    alt="Afghans image"
-                   />
-                  <div className="card-body">
-                    <h5 className="card-title">{post.title}</h5>
-                    <p className="card-text">
-                      {post.subtitle}
-                    </p>
-                    <div className="text-end">
-                    <Link to={`/post/${post._id}`}>Read more</Link>
+                      src={post.image}
+                      className="card-img-top"
+                      alt="{post.title}"
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{post.title}</h5>
+                      <p className="card-text">{post.subtitle}</p>
+                      <div className="text-end">
+                        <Link
+                          to={`/post/${post._id}`}
+                          className="btn btn-danger"
+                        >
+                          Read more
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-                    )
-                    )}
+              ))}
+
+              {donate.map((donate) => (
+                <div key={donate._id}>
+                  <div className="card" style={{ width: "100%" }}>
+                    <img
+                      src={donate.image}
+                      className="card-img-top"
+                      alt={donate.title}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{donate.title}</h5>
+                      <p className="card-text">{donate.subtitle}</p>
+                      <div className="text-end">
+                        {/* <Link to={donate.orgLink}>Donate</Link> */}
+                        <a
+                          href={donate.orgLink}
+                          className="btn btn-danger"
+                          target="_blank"
+                        >
+                          Donate now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
 
               {/* <div class="card" style="width: 100%;">
                               <img src="./assets/img/protextafgans.jpg" class="card-img-top" alt="...">
@@ -251,7 +278,7 @@ function Dashboard() {
                                   <a href="#" class="btn btn-danger">Read more</a>
                                 </div>
                               </div> */}
-              <div className="my-4">
+              {/* <div className="my-4">
                 <div className="card mt-3" style={{ width: "100%" }}>
                   <img src={covidImg1} className="card-img-top" alt="..." />
                   <div className="card-body">
@@ -269,8 +296,8 @@ function Dashboard() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="my-4">
+              </div> */}
+              {/* <div className="my-4">
                 <div className="card mt-3" style={{ width: "100%" }}>
                   <img src={haitiImg} className="card-img-top" alt="..." />
                   <div className="card-body">
@@ -294,7 +321,7 @@ function Dashboard() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* <div class="card mt-3" style="width: 100%;">
                               <img src="./assets/img/covid3.jpg" class="card-img-top" alt="...">
                               <div class="card-body">
@@ -305,7 +332,7 @@ function Dashboard() {
                                   </div>
                               </div>
                           </div> */}
-              <div className="my-4">
+              {/* <div className="my-4">
                 <div className="card mt-3" style={{ width: "100%" }}>
                   <img
                     src={climateChangeImg}
@@ -330,7 +357,7 @@ function Dashboard() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* <div class="card mt-3" style="width: 100%;">
                               <img src="./assets/img/climatechange3.jpg" class="card-img-top" alt="...">
                               <div class="card-body">

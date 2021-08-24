@@ -2,12 +2,12 @@ import React from "react";
 import Auth from "../utils/auth";
 import PrelogHeader from "../components/PrelogHeader";
 import SignupForm from "../components/SignupForm";
-import saveChild from "../assets/savethechildren.jpg"
-import communityImg from "../assets/community2.jpg"
-import volunteerImg from "../assets/volunteerhero.jpg"
-import animalImg from "../assets/animalrights1.jpg"
-import protectAfghanImg from "../assets/protectafgans2.jpg"
-import wildfireImg from "../assets/wilefire.jpg"
+import saveChild from "../assets/savethechildren.jpg";
+import communityImg from "../assets/community2.jpg";
+import volunteerImg from "../assets/volunteerhero.jpg";
+import animalImg from "../assets/animalrights1.jpg";
+import protectAfghanImg from "../assets/protectafgans2.jpg";
+import wildfireImg from "../assets/wilefire.jpg";
 
 const Landing = () => {
   return (
@@ -57,15 +57,15 @@ const Landing = () => {
                   </div>
                 </div>
               </div>
-              {/* <div class="col-1"></div> */}
+              {/* <div className="col-1"></div> */}
             </div>
           </div>
         </div>
         {/* empty */}
-        {/* <div class="empty">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam dolore unde sit, aut iusto voluptatum, deleniti tempora laudantium adipisci ratione obcaecati officia dolorum accusantium deserunt? Pariatur iste distinctio suscipit!</div>
+        {/* <div className="empty">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam dolore unde sit, aut iusto voluptatum, deleniti tempora laudantium adipisci ratione obcaecati officia dolorum accusantium deserunt? Pariatur iste distinctio suscipit!</div>
         </div>
       </div>
     </div> */}
@@ -81,7 +81,7 @@ const Landing = () => {
                   alt="Responsive image"
                 />
               </div>
-              {/* <div class="d-flex align-items-center"> */}
+              {/* <div className="d-flex align-items-center"> */}
               <div className="col-5 d-flex align-items-center">
                 {/* <h2>Our Mission</h2> */}
                 <p>
@@ -143,8 +143,8 @@ const Landing = () => {
                   className="carousel slide"
                   data-bs-ride="carousel"
                 >
-                  {/* <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  {/* <div className="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div> */}
@@ -217,9 +217,21 @@ const Landing = () => {
         <div className="container joinUsTitle">
           <div className="row">
             <div className="col-1" />
-            <div className="col-6">            
+            <div className="col-6">
               <h2>Join the Cause</h2>
-              <p>Sign up and join everyday heroes around the world to keep up with what is happening on our planet and how we can help combat and protect the future. You will gain access to our feed filled with trending topics that need your help today. Access non-profits and see where you can make a difference. <br /> <br />Today is a good day to start making a postive impact on lives that needs a helping hand and a world that needs us to save.  <br /><br /><span className="fw-bold">Together we can.</span></p>
+              <p>
+                Sign up and join everyday heroes around the world to keep up
+                with what is happening on our planet and how we can help combat
+                and protect the future. You will gain access to our feed filled
+                with trending topics that need your help today. Access
+                non-profits and see where you can make a difference. <br />{" "}
+                <br />
+                Today is a good day to start making a postive impact on lives
+                that needs a helping hand and a world that needs us to save.{" "}
+                <br />
+                <br />
+                <span className="fw-bold">Together we can.</span>
+              </p>
             </div>
             <div className="col-1" />
             <SignupForm />
