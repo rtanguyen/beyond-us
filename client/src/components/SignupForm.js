@@ -104,14 +104,15 @@ const SignupForm = () => {
                   onBlur={handleInputChange}
                 />
                 <div
-                  class={`input_underline ${
+                  className={`input_underline ${
                     emailInvalid ? "invalidInput" : ""
                   }`}
                 ></div>
                 {emailErrorMessage && (
                   <p className="error-text">
                     {" "}
-                    <i class="bi bi-exclamation-triangle" /> {emailErrorMessage}
+                    <i className="bi bi-exclamation-triangle" />{" "}
+                    {emailErrorMessage}
                   </p>
                 )}
               </div>
@@ -130,12 +131,15 @@ const SignupForm = () => {
                 onBlur={handleInputChange}
               />
               <div
-                class={`input_underline ${nameInvalid ? "invalidInput" : ""}`}
+                className={`input_underline ${
+                  nameInvalid ? "invalidInput" : ""
+                }`}
               ></div>
               {nameErrorMessage && (
                 <p className="error-text">
                   {" "}
-                  <i class="bi bi-exclamation-triangle" /> {nameErrorMessage}
+                  <i className="bi bi-exclamation-triangle" />{" "}
+                  {nameErrorMessage}
                 </p>
               )}
             </div>
@@ -153,14 +157,14 @@ const SignupForm = () => {
                 onBlur={handleInputChange}
               />
               <div
-                class={`input_underline ${
+                className={`input_underline ${
                   passwordInvalid ? "invalidInput" : ""
                 }`}
               ></div>
               {passwordErrorMessage && (
                 <p className="error-text">
                   {" "}
-                  <i class="bi bi-exclamation-triangle" />{" "}
+                  <i className="bi bi-exclamation-triangle" />{" "}
                   {passwordErrorMessage}
                 </p>
               )}
