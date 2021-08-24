@@ -38,3 +38,19 @@ export const ADD_COMMENT = gql`
     }
   }
 `;
+
+export const ADD_POST = gql`
+  mutation addPost($bodyText: String!) {
+    addPost(bodyText: $bodyText) }{
+      _id
+      subtitle
+      bodyText
+      createdAt
+      orgLink
+      commentCount
+      comments {
+        _id
+      }
+    }
+  }
+`;
