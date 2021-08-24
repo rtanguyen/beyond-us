@@ -216,8 +216,8 @@ const Landing = () => {
       <div className="joinUs mt-5 mb-5" id="jointhecause">
         <div className="container joinUsTitle">
           <div className="row">
-            {/* <div className="col-1" /> */}
-            <div className="col-6">
+            <div className="col-1" />
+            <div className="col-5">
               <h2>Join the Cause</h2>
               <p>
                 Sign up and join everyday heroes around the world to keep up

@@ -79,7 +79,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="container col-6">
+    <div className="container col-5">
       <div className="card card-signUp">
         <div className="card-body signUpForm rounded">
           <p className="card-title text-center fs-4 fw-bold createTitle">
@@ -118,6 +118,7 @@ const SignupForm = () => {
               </div>
             </div>
             <div className="mb-3">
+              <h5 className="text-center">Login Credentials</h5>
               <label htmlFor="exampleFormControlInput1" className="form-label">
                 Username
               </label>
@@ -187,9 +188,8 @@ const SignupForm = () => {
             </div>
             <hr className="my-4" />
             <div className="createAccountForm mb-3 d-flex justify-content-end">
-              <p>Already a member?</p>
-              <p className="d-block text-center mt-2 small goCreateAccount">
-                <Link to="/login">Login</Link>
+              <p>Already a member?
+                <Link to="/login" className="d-block text-center mt-2 small goCreateAccount">Login</Link>
               </p>
             </div>
           </form>
