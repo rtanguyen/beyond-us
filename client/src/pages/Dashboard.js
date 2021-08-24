@@ -10,6 +10,7 @@ import haitiImg3 from '../assets/haiti4.jpg'
 function Dashboard() {
     return (
         <>
+         <PostlogHeader />
             <div>
               {/* DASHBOARD */}
               <div className="dashboard">
