@@ -6,11 +6,12 @@ import climateChangeImg from '../assets/climatechange3.jpg'
 import afghanImg2 from '../assets/afghan.jpg'
 import covidImg2 from '../assets/covid2.jpg'
 import haitiImg3 from '../assets/haiti4.jpg'
+import PostlogHeader from '../components/PostlogHeader'
 
 function Dashboard() {
     return (
         <>
-         <PostlogHeader />
+         <PostlogHeader></PostlogHeader>
             <div>
               {/* DASHBOARD */}
               <div className="dashboard">
@@ -292,4 +293,4 @@ function Dashboard() {
           );
         };
 
-export default Dashboard
+export default Dashboard;
