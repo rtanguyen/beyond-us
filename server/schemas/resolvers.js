@@ -61,16 +61,16 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    addPost: async (parent, args, context) => {
+    addPost: async (parent, { input }, context) => {
       if (context.user) {
         const post = await Posts.create({
-          ...args,
+          input,
           username: context.username,
         });
 
         await User.findByIdAndUpdate(
           { _id: contex.user._id },
-          { $push: { posts: posts._id } },
+          { $push: { posts: input } },
           { new: true }
         );
         throw new AuthenticationError("You must be logged in to add a post.");
