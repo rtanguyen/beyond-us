@@ -1,287 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css"/>
-    <!-- FONT AWESOME IMPORT  --> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- FONT AWESOME IMPORT  -->
     <script
-			src="https://kit.fontawesome.com/f78f1848e0.js"
-			crossorigin="anonymous"
-		></script>
+      src="https://kit.fontawesome.com/f78f1848e0.js"
+      crossorigin="anonymous"
+    ></script>
 
-    <!-- GOOGLE FONT IMPORT  --> 
+    <!-- GOOGLE FONT IMPORT  -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chicle&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chicle&display=swap");
     </style>
 
     <title>Beyond Us</title>
-    <link rel="shortcut icon" type="image/jpg" href="BU-Logo_Beyond Us.png"/>
-</head>
-<body>
-  <!-- NAVIGATION -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav">
-        <div class="container-fluid nav-container">
-          <div class="col-1"></div>
-          <div class="col-4">
-            <a class="navbar-brand mainLogo" href="#"><img src="BU-Logo_Beyond Us.png" class="logoNav" style="width: 10%;"></a>
-          </div>
-          <div class="col-2"></div>
-          <div class="col-3">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdownLeft">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#ourmission">Our Mission</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#howtohelp">How to Help</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#jointhecause">Join the Cause</a>
-                </li>
-                <!-- <li class="nav-item login">
-                  <button type="button" class="btn btn-outline-light logButton btn-sm"><a class="nav-link text-light" href="#">Log In</a></button>
-                </li> -->
-              </ul>
-            </div>
-          </div>
-          <div class="col-1"><button type="button" class="btn btn-outline-light logButton btn-sm"><a class="nav-link text-light" href="login.html">Log In</a></button></div>
-          <div class="col-1"></div>
+    <link rel="shortcut icon" type="image/jpg" href="BU-Logo_Beyond Us.png" />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav
+      className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav"
+    >
+      <div className="container-fluid nav-container">
+        <div className="col-1"></div>
+        <div className="col-4">
+          <a className="navbar-brand mainLogo" href="#"
+            ><img
+              src="BU-Logo_Beyond Us.png"
+              className="logoNav"
+              style="width: 10%"
+          /></a>
         </div>
-      </nav>
-    
-     
+        <div className="col-2"></div>
+        <div className="col-3">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavDropdownLeft">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="#ourmission"
+                  >Our Mission</a
+                >
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#howtohelp">How to Help</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#jointhecause">Join the Cause</a>
+              </li>
+              <!-- <li className="nav-item login">
+                  <button type="button" className="btn btn-outline-light logButton btn-sm"><a className="nav-link text-light" href="#">Log In</a></button>
+                </li> -->
+            </ul>
+          </div>
+        </div>
+        <div className="col-1">
+          <button
+            type="button"
+            className="btn btn-outline-light logButton btn-sm"
+          >
+            <a className="nav-link text-light" href="login.html">Log In</a>
+          </button>
+        </div>
+        <div className="col-1"></div>
+      </div>
+    </nav>
+
     <!-- LANDING -->
-    <div class="mainJumbo mb-5"> 
-      <div class="container jumbo-container">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-10">
-            <div class="container mt-4">
-              <div class="row">
-                <div class="col-6">
-                  <h1 class="display-3"><span class="jumboHead">Beyond Us</span></h1>
-                  <hr class="my-4">
-                  <p>Connecting remarkable humans to extraordinary organizations with one goal in mind, to help those beyond ourselves. Beyond Us brings forth real world issues that require your help today.
+    <div className="mainJumbo mb-5">
+      <div className="container jumbo-container">
+        <div className="row">
+          <div className="col-1"></div>
+          <div className="col-10">
+            <div className="container mt-4">
+              <div className="row">
+                <div className="col-6">
+                  <h1 className="display-3">
+                    <span className="jumboHead">Beyond Us</span>
+                  </h1>
+                  <hr className="my-4" />
+                  <p>
+                    Connecting remarkable humans to extraordinary organizations
+                    with one goal in mind, to help those beyond ourselves.
+                    Beyond Us brings forth real world issues that require your
+                    help today.
                   </p>
-                    <p class="lead">
-                      <button type="button" class="btn btn-danger joinCause btn-med"><a class="nav-link text-light fw-bold" href="#jointhecause">Join the Cause</a></button>
-                    </p>
+                  <p className="lead">
+                    <button
+                      type="button"
+                      className="btn btn-danger joinCause btn-med"
+                    >
+                      <a
+                        className="nav-link text-light fw-bold"
+                        href="#jointhecause"
+                        >Join the Cause</a
+                      >
+                    </button>
+                  </p>
                 </div>
-                <div class="col-4">
-                  <img src="assets/img/savethechildren.jpg" class="img-fluid" alt="Responsive image">
+                <div className="col-4">
+                  <img
+                    src="assets/img/savethechildren.jpg"
+                    className="img-fluid"
+                    alt="Responsive image"
+                  />
                 </div>
               </div>
             </div>
           </div>
-          <!-- <div class="col-1"></div> -->
+          <!-- <div className="col-1"></div> -->
         </div>
       </div>
     </div>
-    
+
     <!-- empty -->
-    <!-- <div class="empty">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam dolore unde sit, aut iusto voluptatum, deleniti tempora laudantium adipisci ratione obcaecati officia dolorum accusantium deserunt? Pariatur iste distinctio suscipit!</div>
+    <!-- <div className="empty">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsam dolore unde sit, aut iusto voluptatum, deleniti tempora laudantium adipisci ratione obcaecati officia dolorum accusantium deserunt? Pariatur iste distinctio suscipit!</div>
         </div>
       </div>
     </div> -->
 
     <!-- Our Mission Statement -->
-    <div class="missionStatement mt-5 mb-5" id="ourmission">
-      <div class="container mission">
-        <div class="row" >
-          <div class="col-2"></div>
-          <div class="col-3">
-            <img src="assets/img/community2.jpg" class="img-fluid" alt="Responsive image">
+    <div className="missionStatement mt-5 mb-5" id="ourmission">
+      <div className="container mission">
+        <div className="row">
+          <div className="col-2"></div>
+          <div className="col-3">
+            <img
+              src="assets/img/community2.jpg"
+              className="img-fluid"
+              alt="Responsive image"
+            />
           </div>
-            <!-- <div class="d-flex align-items-center"> -->
-              <div class="col-5 d-flex align-items-center">
-                  <!-- <h2>Our Mission</h2> -->
-                  <p><span class="fs-2">Our Mission</span><br>Climate change, women's rights, poverty, animal cruelty, and more. These issues we face are affecting people around the world and future generations to come if we don't start to make a change. Our platform provides access to hundreds of non-profits and volunteer organizations in defense of the greater good. Together we can make waves that can impact lives and change the world.</p>
-              </div>
-            <!-- </div> -->
-          <div class="col-1"></div>
+          <!-- <div className="d-flex align-items-center"> -->
+          <div className="col-5 d-flex align-items-center">
+            <!-- <h2>Our Mission</h2> -->
+            <p>
+              <span className="fs-2">Our Mission</span><br />Climate change,
+              women's rights, poverty, animal cruelty, and more. These issues we
+              face are affecting people around the world and future generations
+              to come if we don't start to make a change. Our platform provides
+              access to hundreds of non-profits and volunteer organizations in
+              defense of the greater good. Together we can make waves that can
+              impact lives and change the world.
+            </p>
+          </div>
+          <!-- </div> -->
+          <div className="col-1"></div>
         </div>
       </div>
     </div>
 
-      <!-- What you can do -->
-      <div class="actions mt-5 mb-5" id="howtohelp">
-        <div class="container actionContainer mt-2 py-4 rounded">
-          <div class="row">
-            <div class="col-2"></div>
-            <div class="col-5 d-flex align-items-center">
-              <p><span class="fs-2">How to Help</span><br>Donate. Volunteer. Spread awareness. Be informed. There are many ways to help whether it is big or small. You're making a difference in the world and someone's life.</p>
-            </div>
-            <div class="col-3">
-              <img src="assets/img/volunteerhero.jpg" class="img-fluid" alt="Responsive image">
-            </div>
-            <div class="col-1"></div>
+    <!-- What you can do -->
+    <div className="actions mt-5 mb-5" id="howtohelp">
+      <div className="container actionContainer mt-2 py-4 rounded">
+        <div className="row">
+          <div className="col-2"></div>
+          <div className="col-5 d-flex align-items-center">
+            <p>
+              <span className="fs-2">How to Help</span><br />Donate. Volunteer.
+              Spread awareness. Be informed. There are many ways to help whether
+              it is big or small. You're making a difference in the world and
+              someone's life.
+            </p>
           </div>
+          <div className="col-3">
+            <img
+              src="assets/img/volunteerhero.jpg"
+              className="img-fluid"
+              alt="Responsive image"
+            />
+          </div>
+          <div className="col-1"></div>
         </div>
       </div>
+    </div>
 
-      <!-- Landing closing statement -->
-      <div class="landClose mb-5">
-        <h1 class="landCloseStatement text-center">Speak up. Reach out. Make an impact.</h1>
-      </div>
+    <!-- Landing closing statement -->
+    <div className="landClose mb-5">
+      <h1 className="landCloseStatement text-center">
+        Speak up. Reach out. Make an impact.
+      </h1>
+    </div>
 
     <!-- Discover causes -->
-    <div class="discover mb-5 mt-5">
-      <div class="container disco">
-        <div class="row">
-          <div class="col-2"></div>
-          <div class="col-8">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-              <!-- <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <div className="discover mb-5 mt-5">
+      <div className="container disco">
+        <div className="row">
+          <div className="col-2"></div>
+          <div className="col-8">
+            <div
+              id="carouselExampleCaptions"
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <!-- <div className="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div> -->
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="./assets/img/animalrights1.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <img
+                    src="./assets/img/animalrights1.jpg"
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                  <div className="carousel-caption d-none d-md-block">
                     <h5>Protect Animals lives</h5>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <img src="./assets/img/protectafgans2.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
+                <div className="carousel-item">
+                  <img
+                    src="./assets/img/protectafgans2.jpg"
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                  <div className="carousel-caption d-none d-md-block">
                     <h5>Help Save Afghans</h5>
                   </div>
                 </div>
-                <div class="carousel-item">
-                  <img src="./assets/img/wilefire.jpg" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
+                <div className="carousel-item">
+                  <img
+                    src="./assets/img/wilefire.jpg"
+                    className="d-block w-100"
+                    alt="..."
+                  />
+                  <div className="carousel-caption d-none d-md-block">
                     <h5>Preserve our Planet</h5>
                   </div>
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+              <button
+                className="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="visually-hidden">Next</span>
               </button>
             </div>
           </div>
         </div>
-          <div class="col-2"></div>
+        <div className="col-2"></div>
       </div>
     </div>
 
     <!-- Sign Up-->
-    <div class="joinUs mt-5 mb-5" id="jointhecause">
-      <div class="container joinUsTitle">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-6">            
+    <div className="joinUs mt-5 mb-5" id="jointhecause">
+      <div className="container joinUsTitle">
+        <div className="row">
+          <div className="col-1"></div>
+          <div className="col-6">
             <h2>Join the Cause</h2>
-            <p>Sign up and join everyday heroes around the world to keep up with what is happening on our planet and how we can help combat and protect the future. You will gain access to our feed filled with trending topics that need your help today. Access non-profits and see where you can make a difference. <br> <br>Today is a good day to start making a postive impact on lives that needs a helping hand and a world that needs us to save.  <br><br><span class="fw-bold">Together we can.</span></p>
+            <p>
+              Sign up and join everyday heroes around the world to keep up with
+              what is happening on our planet and how we can help combat and
+              protect the future. You will gain access to our feed filled with
+              trending topics that need your help today. Access non-profits and
+              see where you can make a difference. <br />
+              <br />Today is a good day to start making a postive impact on
+              lives that needs a helping hand and a world that needs us to save.
+              <br /><br /><span className="fw-bold">Together we can.</span>
+            </p>
           </div>
-          <div class="col-1"></div>
-          <div class="col-3">            
-            <div class="card card-signUp">
-              <div class="card-body signUpForm rounded">
-                <p class="card-title text-center fs-4 fw-bold createTitle">Fill out the form below:</p>
-                <form class="login-form">
-                  <div class="form-label-group">
-                    <input type="text" id="username-login" class="form-control" placeholder="Username" required autofocus>
-                    <label for="username-login" class="fs-6 mt-1">Username/Email</label>
+          <div className="col-1"></div>
+          <div className="col-3">
+            <div className="card card-signUp">
+              <div className="card-body signUpForm rounded">
+                <p className="card-title text-center fs-4 fw-bold createTitle">
+                  Fill out the form below:
+                </p>
+                <form className="login-form">
+                  <div className="form-label-group">
+                    <input
+                      type="text"
+                      id="username-login"
+                      className="form-control"
+                      placeholder="Username"
+                      required
+                      autofocus
+                    />
+                    <label for="username-login" className="fs-6 mt-1"
+                      >Username/Email</label
+                    >
                   </div>
-                  <div class="form-label-group mt-3">
-                    <input type="password" id="password-login" class="form-control" placeholder="Password" required>
-                    <label for="password-login" class="fs-6 mt-1">Password</label>
+                  <div className="form-label-group mt-3">
+                    <input
+                      type="password"
+                      id="password-login"
+                      className="form-control"
+                      placeholder="Password"
+                      required
+                    />
+                    <label for="password-login" className="fs-6 mt-1"
+                      >Password</label
+                    >
                   </div>
-                  <div class="container btnLogIn">
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col d-flex justify-content-end">
-                            <button class="btn btn-sm btn-outline-light logButton signUpCTA" type="submit"><a href="#" class="submitBut nav-link text-light">Submit</a></button>
-                        </div>
+                  <div className="container btnLogIn">
+                    <div className="row">
+                      <div className="col"></div>
+                      <div className="col d-flex justify-content-end">
+                        <button
+                          className="btn btn-sm btn-outline-light logButton signUpCTA"
+                          type="submit"
+                        >
+                          <a href="#" className="submitBut nav-link text-light"
+                            >Submit</a
+                          >
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <hr class="my-4">
-                  <div class="createAccountForm mb-3 d-flex justify-content-end">
-                    <p>Already a member?<a class="d-block text-center mt-2 small goCreateAccount" href="/login">Log in</a></p>
+                  <hr className="my-4" />
+                  <div
+                    className="createAccountForm mb-3 d-flex justify-content-end"
+                  >
+                    <p>
+                      Already a member?<a
+                        className="d-block text-center mt-2 small goCreateAccount"
+                        href="/login"
+                        >Log in</a
+                      >
+                    </p>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-          <div class="col-1"></div>
+          <div className="col-1"></div>
         </div>
       </div>
     </div>
 
-     <!-- FOOTER -->
-     <!-- <hr/> -->
-     <footer>
-      <div class="prefooter pt-5 pb-5">
-        <div class="row text-center">
-          <div class="col-2 fw-bold footMain"></div>
-          <div class="col-2 fw-bold footMain">MAIN</div>
-          <div class="col-2 fw-bold footMain">LEARN MORE</div>
-          <div class="col-2 fw-bold footMain">RESOURCES</div>
-          <div class="col-2 fw-bold"><a class="sm px-2" href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter socialMedia fa-2x"></i></a></div>
-          <div class="col-2 fw-bold"></div>
-        </div>
-        <div class="row text-center">
-          <div class="col-2 fw-bold footsies"></div>
-          <div class="col-2 footsm footsies"><a class="sm" href="#">Urgent Causes</a></div>
-          <div class="col-2 footsm footsies"><a class="sm" href="#">Our Mission</a></div>
-          <div class="col-2 footsm footsies"><a class="sm" href="#">Help</a></div>
-          <div class="col-2 footsm footsies"><a class="sm px-2" href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p socialMedia fa-2x"></i></a></div>
-          <div class="col-2 fw-bold footsies"></div>
-        </div>
-        <div class="row text-center">
-          <div class="col-2 fw-bold footsies"></div>
-          <div class="col-2 footsm footsies"><a class="sm" href="#">Feed</a></div>
-          <div class="col-2 footsm footsies"><a class="sm" href="#">Fundraise</a></div>
-          <div class="col-2 footsm footsies"><a class="sm" href="#">Terms</a></div>
-          <div class="col-2 footsm footsies"><a class="sm px-2" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square socialMedia fa-2x"></i></a></div>
-          <div class="col-2 fw-bold footsies"></div>
-        </div>
-        <div class="row text-center">
-          <div class="col-2 fw-bold footsies"></div>
-          <div class="col-2 footsm footsies"><a class="sm" href="#">Sign Up</a></div>
-          <div class="col-2 footsm footsies"><a class="sm" href="#">Volunteer</a></div>
-          <div class="col-2 footsm footsies"><a class="sm" href="#">Contact Us</a></div>
-          <div class="col-2 footsm footsies"><a class="sm px-2" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram socialMedia fa-2x"></i></a></div>
-          <div class="col-2 fw-bold footsies"></div>
-        </div>
-        <div class="row text-center"> 
-            <div class="col-2 fw-bold footsies"></div>
-            <div class="col-2 footsm footsies"><a class="sm" href="#">Log In</a></div>
-            <div class="col-2 footsm footsies"><a class="sm" href="#"></a></div>
-            <div class="col-2 footsm footsies"><a class="sm" href="#">FAQs</a></div>
-            <div class="col-2 footsm footsies"></div>
-            <div class="col-2 fw-bold footsies"></div>
+    <!-- FOOTER -->
+    <!-- <hr/> -->
+    <footer>
+      <div className="prefooter pt-5 pb-5">
+        <div className="row text-center">
+          <div className="col-2 fw-bold footMain"></div>
+          <div className="col-2 fw-bold footMain">MAIN</div>
+          <div className="col-2 fw-bold footMain">LEARN MORE</div>
+          <div className="col-2 fw-bold footMain">RESOURCES</div>
+          <div className="col-2 fw-bold">
+            <a
+              className="sm px-2"
+              href="https://twitter.com/?lang=en"
+              target="_blank"
+              ><i className="fab fa-twitter socialMedia fa-2x"></i
+            ></a>
           </div>
+          <div className="col-2 fw-bold"></div>
+        </div>
+        <div className="row text-center">
+          <div className="col-2 fw-bold footsies"></div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Urgent Causes</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Our Mission</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Help</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a
+              className="sm px-2"
+              href="https://www.pinterest.com/"
+              target="_blank"
+              ><i className="fab fa-pinterest-p socialMedia fa-2x"></i
+            ></a>
+          </div>
+          <div className="col-2 fw-bold footsies"></div>
+        </div>
+        <div className="row text-center">
+          <div className="col-2 fw-bold footsies"></div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Feed</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Fundraise</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Terms</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a
+              className="sm px-2"
+              href="https://www.facebook.com/"
+              target="_blank"
+              ><i className="fab fa-facebook-square socialMedia fa-2x"></i
+            ></a>
+          </div>
+          <div className="col-2 fw-bold footsies"></div>
+        </div>
+        <div className="row text-center">
+          <div className="col-2 fw-bold footsies"></div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Sign Up</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Volunteer</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Contact Us</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a
+              className="sm px-2"
+              href="https://www.instagram.com/"
+              target="_blank"
+              ><i className="fab fa-instagram socialMedia fa-2x"></i
+            ></a>
+          </div>
+          <div className="col-2 fw-bold footsies"></div>
+        </div>
+        <div className="row text-center">
+          <div className="col-2 fw-bold footsies"></div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">Log In</a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#"></a>
+          </div>
+          <div className="col-2 footsm footsies">
+            <a className="sm" href="#">FAQs</a>
+          </div>
+          <div className="col-2 footsm footsies"></div>
+          <div className="col-2 fw-bold footsies"></div>
+        </div>
       </div>
-<!-- DIVIDER -->
+      <!-- DIVIDER -->
       <!-- <hr/> -->
-      <div class="bottomFooter pt-4">
-        <div class="content has-text-centered footerThanks">
-          <div class="row text-center">
-            <div class="col-12 footsm">
+      <div className="bottomFooter pt-4">
+        <div className="content has-text-centered footerThanks">
+          <div className="row text-center">
+            <div className="col-12 footsm">
               <p>BEYONDUS.COM © 2021. ALL RIGHTS RESERVED</p>
             </div>
           </div>
@@ -290,8 +493,10 @@
     </footer>
 
     <!-- BOOTSTRAP -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
