@@ -7,7 +7,9 @@ import afghanImg2 from "../assets/afghan.jpg";
 import covidImg2 from "../assets/covid2.jpg";
 import haitiImg3 from "../assets/haiti4.jpg";
 import PostlogHeader from "../components/PostlogHeader";
-import postSeed from "../assets/postSeed";
+import post from "../assets/postSeed";
+import {Link} from 'react-router-dom';
+
 
 function Dashboard() {
   return (
@@ -216,31 +218,29 @@ function Dashboard() {
               </ul>
             </div>
             <div className="col-7 pl-2 pr-2">
-              <div>
-                <div className="card" style={{ width: "100%" }}>
-                  <img
-                    src={afghan1Img}
+
+                    {post.map(post => (
+              <div key={post._id}>
+              <div className="card" style={{ width: "100%" }}>
+                    <img
+                    src={post.image}
                     className="card-img-top"
                     alt="Afghans image"
-                  />
+                   />
                   <div className="card-body">
-                    <h5 className="card-title">Help save Afghans</h5>
+                    <h5 className="card-title">{post.title}</h5>
                     <p className="card-text">
-                      As the Taliban has breached the capital city of Kabul,
-                      thousands of Afghans are fighting to find a way out.
-                      Humanitarians and soldiers on the ground are doing what
-                      they can, but here is our oppurtunity to help save
-                      hundreds of lives. Read more on the efforts to get planes
-                      on the ground to bring Afghans to safety.
+                      {post.subtitle}
                     </p>
                     <div className="text-end">
-                      <a href="#" className="btn btn-danger">
-                        Read more
-                      </a>
+                    <Link to={`/post/${post._id}`}>Read more</Link>
                     </div>
                   </div>
                 </div>
               </div>
+                    )
+                    )}
+
               {/* <div class="card" style="width: 100%;">
                               <img src="./assets/img/protextafgans.jpg" class="card-img-top" alt="...">
                               <div class="card-body">

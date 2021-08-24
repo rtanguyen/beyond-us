@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 import { LOGIN_USER } from "../utils/mutations";
 import { HashLink } from "react-router-hash-link";
+import PrelogHeader from "../components/PrelogHeader"
 
 const LoginForm = (props) => {
   const [userFormData, setUserFormData] = useState({
@@ -47,6 +48,8 @@ const LoginForm = (props) => {
   };
 
   return (
+    <>
+    <PrelogHeader/>
     <div className="container login">
       <div className="row">
         <div className="col-4" />
@@ -117,6 +120,7 @@ const LoginForm = (props) => {
         <div className="col-4" />
       </div>
     </div>
+    </>
   );
 };
 
