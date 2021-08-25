@@ -23,12 +23,12 @@ const Footer = () => {
         <div className="row text-center">
           <div className="col-2 fw-bold footsies" />
           <div className="col-2 footsm footsies">
-            <a className="sm" href="#">
+            <a className="sm" href="#urgentcauses">
               Urgent Causes
             </a>
           </div>
           <div className="col-2 footsm footsies">
-            <a className="sm" href="#">
+            <a className="sm" href="#ourmission">
               Our Mission
             </a>
           </div>
@@ -79,7 +79,7 @@ const Footer = () => {
         <div className="row text-center">
           <div className="col-2 fw-bold footsies" />
           <div className="col-2 footsm footsies">
-            <a className="sm" href="#">
+            <a className="sm" href="#signup">
               Sign Up
             </a>
           </div>
@@ -123,7 +123,19 @@ const Footer = () => {
           <div className="col-2 fw-bold footsies" />
         </div>
       </div>
+      {/* DIVIDER */}
+      {/* <hr/> */}
+      <div className="bottomFooter pt-4">
+        <div className="content has-text-centered footerThanks">
+          <div className="row text-center">
+            <div className="col-12 footsm">
+              <p>BEYONDUS.COM © 2021. ALL RIGHTS RESERVED</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+    
   );
 };
 

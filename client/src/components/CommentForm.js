@@ -4,6 +4,7 @@ import { QUERY_POST } from "../utils/queries";
 import { ADD_COMMENT } from "../utils/mutations";
 
 const CommentForm = () => {
+
   const [newComment, setNewComment] = useState({
     commentBody: "",
   });
@@ -61,5 +62,7 @@ const CommentForm = () => {
     </div>
   );
 };
+
+
 
 export default CommentForm;
