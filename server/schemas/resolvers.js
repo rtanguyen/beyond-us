@@ -69,7 +69,7 @@ const resolvers = {
         });
 
         await User.findByIdAndUpdate(
-          { _id: contex.user._id },
+          { _id: context.user._id },
           { $push: { posts: input } },
           { new: true }
         );
