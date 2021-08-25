@@ -17,20 +17,22 @@ const CommentForm = () => {
           <div className="col-2" />
         </div>
         <div className="postedComments container">
-          <div className="row pastComments" id="commentPast">
-            <div className="col-1" />
-            <div className="container">
-              <div className="row">
-                <div className="col-2">
-                  <p className="name fw-bold">Beyonce</p>
-                  <p className="date">12.23.2013</p>
-                </div>
-                <div className="col-7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus sunt rem nihil recusandae? Tenetur tempora temporibus nam, dolor eius eaque, sint, totam vitae culpa voluptate accusamus minus harum! At, qui.</div>
-              </div>
+         {comment.map((comment) => (
+            <div key={comment._id} className="row pastComments" id="commentPast">
+               <div className="col-1" />
+                  <div className="container">
+                  <div className="row">
+                     <div className="col-2">
+                     <p className="name fw-bold">{comment.username}</p>
+                     <p className="date">{comment.createdAt}</p>
+                     </div>
+                     <div className="col-7">{comment.body}</div>
+                  </div>
+               </div>
+               <div className="col-1" />
             </div>
-            <div className="col-1" />
-          </div>
-        </div>
+         ))}
+         </div>
       </div>
     );
   };
