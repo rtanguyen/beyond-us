@@ -2,7 +2,7 @@ import React from "react";
 import posts from "../assets/postSeed";
 import { useParams } from "react-router-dom";
 import CommentForm from "../components/CommentForm";
-import CommentList from "../components/CommentList";
+// import CommentList from "../components/CommentList";
 
 const Singlepost = (props) => {
   const { id: postId } = useParams();
@@ -58,7 +58,7 @@ const Singlepost = (props) => {
         </div>
       </div>
       <CommentForm />
-      <CommentList />
+      {/* <CommentList /> */}
     </>
   );
 };
