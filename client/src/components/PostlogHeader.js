@@ -9,10 +9,10 @@ const PostlogHeader = () => {
       <div className="container-fluid nav-container">
         <div className="col-1" />
         <div className="col-4">
-          <a className="navbar-brand mainLogo">
-            <Link to={`/home`}></Link>
+          {/* <a className="navbar-brand mainLogo"> */}
+          <Link to={"/home"}>
             <img src={LogoPic} className="logoNav" style={{ width: "10%" }} />
-          </a>
+          </Link>
         </div>
         <div className="col-2" />
         <div className="col-3">
@@ -30,18 +30,20 @@ const PostlogHeader = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdownLeft">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a
+                {/* <a
                   className="nav-link"
                   aria-current="page"
-                  href="#happeningnow"
-                >
-                  Happening Now
+                  href="#happeningnow">
                 </a>
+                 */}
+                <Link to={`/home`} className="nav-link">
+                  Happening Now
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#trending">
+                <Link to={`/home`} className="nav-link">
                   Trending
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#news">
@@ -49,9 +51,9 @@ const PostlogHeader = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#news">
-                  <Link to={`/add`}>Create</Link>
-                </a>
+                <Link to={`/add`} className="nav-link">
+                  Create
+                </Link>
               </li>
             </ul>
           </div>
