@@ -9,8 +9,9 @@ const PrelogHeader = () => {
     {/* NAVIGATION */}
     <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav px-5">
       <div className="container-fluid nav-container ">
-        <link to="{&quot;/&quot;}" />
-        <img src="{LogoPic}" classname="logoNav navbar-brand mainLogo" style={{ width: "15%" }} />
+      <Link to={"/"}>
+            <img src={LogoPic} className="logoNav navbar-brand mainLogo" style={{ width: "13%" }} />
+          </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
           <span />
