@@ -35,11 +35,13 @@ const Singlepost = (props) => {
           <div className="column spImage">
             <div className="row">
               <div className="text-center spImage">
-                <img
-                  src={post.image}
-                  style={{ width: "50%" }}
-                  alt={post.title}
-                />
+                {post.image && (
+                  <img
+                    src={post.image}
+                    className="card-img-top"
+                    alt={post.title}
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -58,10 +60,10 @@ const Singlepost = (props) => {
         </div>
       </div>
 
-      <div class="container mb-5">
-        <div class="row">
+      <div className="container mb-5">
+        <div className="row">
           <CommentForm postsId={post._id} />
-          <div class="col-2"></div>
+          <div className="col-2"></div>
         </div>
         <div className="postedComments container">
           <div className="row pastComments" id="commentPast">

@@ -79,6 +79,7 @@ const resolvers = {
     },
     addComment: async (parent, { postsId, commentBody }, context) => {
       if (context.user) {
+        console.log(commentBody);
         const updatedPost = await Posts.findOneAndUpdate(
           { _id: postsId },
           {
