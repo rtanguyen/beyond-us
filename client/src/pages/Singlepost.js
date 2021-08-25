@@ -41,6 +41,7 @@ const Singlepost = (props) => {
                     src={post.image}
                     className="card-img-top"
                     alt={post.title}
+                    style={{ width: "50%" }}
                   />
                 )}
               </div>
