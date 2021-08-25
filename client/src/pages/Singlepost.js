@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import CommentForm from "../components/CommentForm";
 import {QUERY_POST} from '../utils/queries'
-// import CommentList from "../components/CommentList";
+import CommentList from "../components/CommentList";
 
 const Singlepost = (props) => {
   const { id: postId } = useParams();
@@ -50,7 +50,7 @@ console.log(post);
           <div className="spBody py-5 row">
             <div className="col-2" />
             <div className="col-8">
-              <p className="spBodyContent">{currentPost.bodyText}</p>
+              <p className="spBodyContent">{post.bodyText}</p>
               {/* <div className="writtenBy">
                 <p className="author text-end">Written by: Mimi Vo</p>
               </div> */}
@@ -61,18 +61,15 @@ console.log(post);
       </div>
   
       <div class="container mb-5">
-      <hr />
-      <h4 class="pt-4">
-        Comments
-      </h4>
+
       <div class="row">
-        <CommentForm />
+        <CommentForm postsId={post._id}/>
         <div class="col-2"></div>
       </div>
       <div className="postedComments container">
             <div className="row pastComments" id="commentPast">
                 <div className="col-1" />
-                <CommentList />
+                <CommentList comments={post.comments}/>
                 <div className="col-1" />
             </div>
       </div>
