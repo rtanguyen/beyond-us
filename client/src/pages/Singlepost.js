@@ -57,8 +57,24 @@ const Singlepost = (props) => {
           </div>
         </div>
       </div>
-      <CommentForm />
-      {/* <CommentList /> */}
+  
+      <div class="container mb-5">
+      <hr />
+      <h4 class="pt-4">
+        Comments
+      </h4>
+      <div class="row">
+        <CommentForm />
+        <div class="col-2"></div>
+      </div>
+      <div className="postedComments container">
+            <div className="row pastComments" id="commentPast">
+                <div className="col-1" />
+                <CommentList />
+                <div className="col-1" />
+            </div>
+      </div>
+    </div>
     </>
   );
 };
