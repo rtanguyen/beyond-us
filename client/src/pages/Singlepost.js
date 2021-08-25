@@ -49,9 +49,9 @@ const Singlepost = (props) => {
             <div className="col-2" />
             <div className="col-8">
               <p className="spBodyContent">{currentPost.bodyText}</p>
-              <div className="writtenBy">
+              {/* <div className="writtenBy">
                 <p className="author text-end">Written by: Mimi Vo</p>
-              </div>
+              </div> */}
             </div>
             <div className="col-2" />
           </div>
