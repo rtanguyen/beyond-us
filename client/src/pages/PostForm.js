@@ -42,8 +42,8 @@ const PostForm = () => {
       });
       const { title, subtitle, bodyText, orgLink, image } = data.addPost;
       console.log(title, subtitle, bodyText, orgLink, image);
-      // setNewPost("");
-      // window.location.assign("/home");
+      setNewPost("");
+      window.location.assign("/home");
     } catch (e) {
       console.error(e);
     }
