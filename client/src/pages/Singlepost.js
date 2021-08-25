@@ -1,18 +1,20 @@
 import React from "react";
-import posts from "../assets/postSeed";
 import { useParams } from "react-router-dom";
+import { useQuery } from "@apollo/client";
+
 import CommentForm from "../components/CommentForm";
+import {QUERY_POST} from '../utils/queries'
 // import CommentList from "../components/CommentList";
 
 const Singlepost = (props) => {
   const { id: postId } = useParams();
-  console.log(posts._id);
-  console.log({ postId });
+  const { loading, data } = useQuery(QUERY_POST, {
+    variables: { id: postId },
+  });
 
-  const currentPost = function filterPost({ postId }) {
-    return posts.filter((post) => post._id === postId);
-  };
+  const post = data?.post || {};
 
+console.log(post);
   return (
     <>
       <div>
@@ -22,11 +24,11 @@ const Singlepost = (props) => {
             <div className="row">
               <div className="col-12 mt-3">
                 <h2 className="text-center fw-bolder spTitle">
-                  {currentPost.title}
+                  {post.title}
                 </h2>
                 <br />
                 <h5 className="text-center spSubtitle">
-                  {currentPost.subtitle}
+                  {post.subtitle}
                 </h5>
                 <p className="spDate text-center"></p>
               </div>
@@ -36,9 +38,9 @@ const Singlepost = (props) => {
             <div className="row">
               <div className="text-center spImage">
                 <img
-                  src={currentPost.image}
+                  src={post.image}
                   style={{ width: "50%" }}
-                  alt={currentPost.title}
+                  alt={post.title}
                 />
               </div>
             </div>
@@ -48,7 +50,7 @@ const Singlepost = (props) => {
           <div className="spBody py-5 row">
             <div className="col-2" />
             <div className="col-8">
-              <p className="spBodyContent">{currentPost.bodyText}</p>
+              <p className="spBodyContent">{post.bodyText}</p>
               <div className="writtenBy">
                 <p className="author text-end">Written by: Mimi Vo</p>
               </div>

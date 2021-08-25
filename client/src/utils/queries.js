@@ -22,12 +22,11 @@ export const QUERY_POSTS = gql`
 
 export const QUERY_POST = gql`
   query post($id: ID!) {
-    posts(_id: $id) {
+    post(_id: $id) {
       _id
       title
       subtitle
       bodyText
-      
       image
       orgLink
       comments {
