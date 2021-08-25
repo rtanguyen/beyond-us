@@ -9,8 +9,8 @@ const PrelogHeader = () => {
     {/* NAVIGATION */}
     <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav px-5">
       <div className="container-fluid nav-container ">
-      <Link to={"/"}>
-            <img src={LogoPic} className="logoNav navbar-brand mainLogo" style={{ width: "13%" }} />
+      <Link to={"/"} className="navbar-brand mainLogo">
+            <img src={LogoPic} className="logoNav" style={{ width: "13%" }} />
           </Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
@@ -28,8 +28,8 @@ const PrelogHeader = () => {
             <li className="nav-item">
               <a className="nav-link" href="#jointhecause">Join the Cause</a>
             </li>
-            <button type="button" className="btn btn-outline-light logButton btn-sm login ms-2"><link to="/login" className="nav-link text-light" />Log In</button>
           </ul>
+          <button type="button" className="btn btn-outline-light logButton btn-sm login"><Link to="/login" className="text-light">Log In</Link></button>
         </div>
       </div>
     </nav>
