@@ -14,6 +14,7 @@ import Nav from "./components/Nav";
 import Landing from "./pages/Landing";
 import Login from "./pages/LoginForm";
 import Dashboard from "./pages/Dashboard";
+import PostForm from "./pages/PostForm";
 import Singlepost from "./pages/Singlepost";
 import Footer from "./components/Footer";
 
@@ -54,6 +55,7 @@ function App() {
             <Route exact path="/" component={Landing} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/home" component={Dashboard} />
+            <Route exact path="/add" component={PostForm} />
             <Route exact path="/post/:id" component={Singlepost} />
           </Switch>
         </div>

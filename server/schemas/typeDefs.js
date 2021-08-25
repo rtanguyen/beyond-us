@@ -44,7 +44,7 @@ const typeDefs = gql`
     login(username: String!, password: String!): Auth
     addUser(username: String, email: String!, password: String!): Auth
     addPost(input: PostDetails): Posts
-    addComment(postsId: ID!, commentBody: String!): Posts
+    addComment(postsId: ID!, commentBody: String): Posts
   }
   type Auth {
     token: ID!

@@ -1,19 +1,20 @@
 import React from 'react'
 
-const CommentList = () => {
+const CommentList = ({ comments }) => {
+  console.log(comments);
    return(
-      <div classname="container">
-      {'{'}comment.map((comment) =&gt; (
-      <div key="{comment._id}" classname="row">
-        <div classname="col-2">
-          <p classname="name fw-bold">{'{'}comment.username{'}'}</p>
-          <p classname="date">{'{'}comment.createdAt{'}'}</p>
+      <div className="container">
+      {comments && comments.map((comment) => (
+      <div key="{comment._id}" className="row">
+        <div className="col-2">
+          <p className="name fw-bold">{comment.username}</p>
+          <p className="date">{comment.createdAt}</p>
         </div>
-        <div classname="col-7">{'{'}comment.body{'}'}</div>
+        <div className="col-7">{comment.body}</div>
       </div>
-      )){'}'}
-    </div>
-  );
+      ))}
+      </div>
+   )
 };
 
 export default CommentList;

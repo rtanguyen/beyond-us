@@ -64,7 +64,6 @@ const resolvers = {
       return { token, user };
     },
     addPost: async (parent, { input }, context) => {
-      
       if (context.user) {
         console.log(input);
         const post = await Posts.create(input);
@@ -80,7 +79,7 @@ const resolvers = {
     },
     addComment: async (parent, { postsId, commentBody }, context) => {
       if (context.user) {
-        const updatedPost = await Post.findOneAndUpdate(
+        const updatedPost = await Posts.findOneAndUpdate(
           { _id: postsId },
           {
             $push: {

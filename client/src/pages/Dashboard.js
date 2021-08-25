@@ -24,7 +24,7 @@ function Dashboard() {
   return (
     <>
       <PostlogHeader />
-      <PostForm />
+      {/* <PostForm /> */}
       <div>
         {/* DASHBOARD */}
         <div className="dashboard">
