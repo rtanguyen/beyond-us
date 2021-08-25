@@ -7,9 +7,16 @@ import PostForm from "./PostForm";
 
 import { QUERY_POSTS } from "../utils/queries";
 
+import afghan1Img from "../assets/protextafgans.jpg";
+import covidImg1 from "../assets/covid3.jpg";
+import haitiImg from "../assets/haiti1.jpg";
+import climateChangeImg from "../assets/climatechange3.jpg";
 import afghanImg2 from "../assets/afghan.jpg";
 import covidImg2 from "../assets/covid2.jpg";
 import haitiImg3 from "../assets/haiti4.jpg";
+import donate from "../assets/donateSeed";
+import postSeed from "../assets/postSeed";
+
 function Dashboard() {
   const { loading, data } = useQuery(QUERY_POSTS);
   const posts = data?.posts || [];
@@ -220,8 +227,10 @@ function Dashboard() {
                 </li>
               </ul>
             </div>
+
             <div className="col-7 pl-2 pr-2">
-              {posts.map((post) => (
+
+            {posts.map((post) => (
                 <div key={post._id}>
                   <div className="card" style={{ width: "100%" }}>
                     <img
@@ -239,6 +248,56 @@ function Dashboard() {
                         >
                           Read more
                         </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {postSeed.map((post) => (
+                <div key={post._id}>
+                  <div className="card" style={{ width: "100%" }}>
+                    <img
+                      src={post.image}
+                      className="card-img-top"
+                      alt="{post.title}"
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{post.title}</h5>
+                      <p className="card-text">{post.subtitle}</p>
+                      <div className="text-end">
+                        <Link
+                          to={`/post/${post._id}`}
+                          className="btn btn-danger"
+                        >
+                          Read more
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {donate.map((donate) => (
+                <div key={donate._id}>
+                  <div className="card" style={{ width: "100%" }}>
+                    <img
+                      src={donate.image}
+                      className="card-img-top"
+                      alt={donate.title}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{donate.title}</h5>
+                      <p className="card-text">{donate.subtitle}</p>
+                      <div className="text-end">
+                        {/* <Link to={donate.orgLink}>Donate</Link> */}
+                        <a
+                          href={donate.orgLink}
+                          className="btn btn-danger"
+                          target="_blank"
+                        >
+                          Donate now
+                        </a>
                       </div>
                     </div>
                   </div>

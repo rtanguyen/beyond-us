@@ -7,14 +7,14 @@ export const QUERY_POSTS = gql`
       title
       subtitle
       bodyText
-      createdAt
+      
       image
       orgLink
       comments {
         _id
         commentBody
         username
-        createdAt
+        
       }
     }
   }
@@ -27,14 +27,14 @@ export const QUERY_POST = gql`
       title
       subtitle
       bodyText
-      createdAt
+      
       image
       orgLink
       comments {
         _id
         commentBody
         username
-        createdAt
+        
       }
     }
   }

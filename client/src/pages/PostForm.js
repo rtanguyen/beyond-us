@@ -15,6 +15,8 @@ const PostForm = () => {
     orgLink: "",
   });
 
+  const [addPost, { error }] = useMutation(ADD_POST);
+
   const handleChange = (event) => {
     //  const { name, value } = event.target.value;
 
@@ -29,9 +31,9 @@ const PostForm = () => {
     console.log({ ...newPost });
     try {
       const { data } = await addPost({
-        variables: { ...newPost },
+        variables: { input: {...newPost} },
       });
-      const { title, subtitle, bodyText, createdAt, orgLink, image } =
+      const { title, subtitle, bodyText, orgLink, image } =
         data.addPost;
       setNewPost("");
     } catch (e) {
@@ -39,20 +41,7 @@ const PostForm = () => {
     }
   };
 
-  const [addPost, { error }] = useMutation(ADD_POST);
-  //     update(cache, { data: { addPost } }) {
-  //       try {
-  //         const { posts } = cache.readQuery({ query: QUERY_POSTS });
 
-  //         cache.writeQuery({
-  //           query: QUERY_POSTS,
-  //           data: { posts: [addPost, ...posts] },
-  //         });
-  //       } catch (e) {
-  //         console.error(e);
-  //       }
-  //     },
-  //   });
 
   const toggleWidget = (event) =>
     window.cloudinary.openUploadWidget(
