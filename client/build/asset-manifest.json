@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e820e94b.chunk.css",
+    "main.js": "/static/js/main.9b1b25f6.chunk.js",
+    "main.js.map": "/static/js/main.9b1b25f6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8a258a78.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8a258a78.js.map",
+    "static/js/2.0a7b296d.chunk.js": "/static/js/2.0a7b296d.chunk.js",
+    "static/js/2.0a7b296d.chunk.js.map": "/static/js/2.0a7b296d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9e88e402088abc52df9826187c6d2ece.js": "/precache-manifest.9e88e402088abc52df9826187c6d2ece.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.e820e94b.chunk.css.map": "/static/css/main.e820e94b.chunk.css.map",
+    "static/js/2.0a7b296d.chunk.js.LICENSE.txt": "/static/js/2.0a7b296d.chunk.js.LICENSE.txt",
+    "static/media/afghan.jpg": "/static/media/afghan.ffde4643.jpg",
+    "static/media/animalrights1.jpg": "/static/media/animalrights1.8d11417c.jpg",
+    "static/media/climatechange3.jpg": "/static/media/climatechange3.dbc98701.jpg",
+    "static/media/community2.jpg": "/static/media/community2.0d725335.jpg",
+    "static/media/covid2.jpg": "/static/media/covid2.43707003.jpg",
+    "static/media/covid3.jpg": "/static/media/covid3.d2560cb5.jpg",
+    "static/media/haiti1.jpg": "/static/media/haiti1.49c68099.jpg",
+    "static/media/haiti4.jpg": "/static/media/haiti4.08fcedc4.jpg",
+    "static/media/protectafgans2.jpg": "/static/media/protectafgans2.10cf1e59.jpg",
+    "static/media/protextafgans.jpg": "/static/media/protextafgans.aa8d2c1c.jpg",
+    "static/media/savethechildren.jpg": "/static/media/savethechildren.ca91b8ba.jpg",
+    "static/media/volunteerhero.jpg": "/static/media/volunteerhero.61286646.jpg",
+    "static/media/wilefire.jpg": "/static/media/wilefire.51f4a400.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a258a78.js",
+    "static/js/2.0a7b296d.chunk.js",
+    "static/css/main.e820e94b.chunk.css",
+    "static/js/main.9b1b25f6.chunk.js"
+  ]
+}
