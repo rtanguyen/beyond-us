@@ -1,7 +1,10 @@
-/* Global styles */
+/* GLOBAL */
 * {
     font-family: 'Lato', sans-serif;
+    /* margin-left: 5rem;
+    margin-right: 2rem; */
 }
+
 
 hr {
     margin-top: 1rem;
@@ -12,11 +15,19 @@ hr {
 
 
 /* Nav Bar styles */
+.logoNav {
+    width: 20px;
+}
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+}
 .nav-container {
-    /* margin-left: 10rem;
-    margin-right: 10rem; */
+    /* margin-left: 144px;
+    margin-right: 144px; */
     padding-top: .5rem;
     padding-bottom: .5rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .logButton {
@@ -44,7 +55,68 @@ hr {
 /* LANDING PAGE */ 
     /* Jumbotron */
 .jumbotron {
-    padding: 0px 20px 0px 20px; 
+    padding: 0px 40px 0px 40px; 
+}
+
+.joinCause {
+    background-color: lightgray;
+}
+
+.joinCause:hover {
+    background-color: yellow;
+}
+.actionContainer {
+    background-color: thistle;
+}
+
+.signUpCTA {
+    text-decoration: none;
+}
+
+.disco {
+    background-color: thistle;
+}
+
+.signUpForm {
+    box-shadow: 4px 2px 3px 4px lightgray;
+}
+
+/* DASHBOARD PAGE */
+
+/* .dashboard {
+    background: antiquewhite;
+}
+
+.happeningNow {
+    color: #32A7AD;
+} */
+
+.mainTweet {
+    color: aqua;
+}
+
+.h5 {
+    font-weight: bolder;
+}
+
+a {
+    color: #0d6efd;
+    text-decoration: none !important;
+}
+
+.sb {
+    text-decoration: none;
+    color: aqua;
+}
+
+.roundImg {
+    border-radius: 50%;
+}
+
+
+/* USER POST */ 
+.disclaimer {
+    font-size: 12px;
 }
 
 
@@ -69,8 +141,10 @@ hr {
     color: #000000;
 }
 
-/* .footsies {
+.footsies {
     @include media-breakpoint-up(sm) {
             width: 6rem;
     }
-}    */
+}   
+
+
