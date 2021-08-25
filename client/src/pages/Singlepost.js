@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
+// import { lineBreak } from "../utils/helpers";
 import { QUERY_POST } from "../utils/queries";
 import CommentForm from "../components/CommentForm";
 import CommentList from "../components/CommentList";
@@ -57,6 +58,13 @@ const Singlepost = (props) => {
             </div>
             <div className="col-2" />
           </div>
+          {post.orgLink && (
+            <div className="text-end">
+              <a href={post.orgLink} className="btn btn-danger" target="_blank">
+                &gt;&gt;
+              </a>
+            </div>
+          )}
         </div>
       </div>
 
