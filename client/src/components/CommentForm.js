@@ -1,38 +1,54 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { QUERY_POST } from "../utils/queries";
+import { ADD_COMMENT } from "../utils/mutations";
 
 const CommentForm = () => {
-   return(
 
-      <div className="container mb-5">
-        <hr />
-        <h4 className="pt-4">
-          Comments
-        </h4>
-        <div className="row">
-          {/* <div class="col-1"></div> */}
-          <div className="mb-3 commentBox col-10">
-            <label htmlFor="exampleFormControlTextarea1" className="form-label" />
-            <textarea className="form-control" id="exampleFormControlTextarea1" rows={3} defaultValue={""} />
-          </div>
-          <div className="col-2" />
-        </div>
-        <div className="postedComments container">
-          <div className="row pastComments" id="commentPast">
-            <div className="col-1" />
-            <div className="container">
-              <div className="row">
-                <div className="col-2">
-                  <p className="name fw-bold">Beyonce</p>
-                  <p className="date">12.23.2013</p>
-                </div>
-                <div className="col-7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus sunt rem nihil recusandae? Tenetur tempora temporibus nam, dolor eius eaque, sint, totam vitae culpa voluptate accusamus minus harum! At, qui.</div>
-              </div>
-            </div>
-            <div className="col-1" />
-          </div>
-        </div>
-      </div>
-    );
+  const [newComment, setNewComment] = useState({
+    commentBody: "",
+  });
+
+  const [addComment, { error }] = useMutation(ADD_COMMENT);
+  const handleChange = (event) => {
+    setNewComment({
+      ...newComment,
+      [event.target.name]: event.target.value,
+    });
   };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await addComment({
+        variables: { ...newComment },
+      });
+      console.log(data);
+      setNewComment("");
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  return (
+    <form onSubmit={handleFormSubmit}>
+      <textarea
+        className="form-input"
+        placeholder="comment"
+        type="text"
+        id="comment"
+        name="commentBody"
+        value={newComment.commentBody}
+        onChange={handleChange}
+      />
+      <button className="btn d-block w-100" type="submit">
+        Submit
+      </button>
+    </form>
+  );
+};
+
+
 
 export default CommentForm;

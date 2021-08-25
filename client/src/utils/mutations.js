@@ -26,7 +26,7 @@ export const ADD_USER = gql`
 
 export const ADD_COMMENT = gql`
   mutation addComment($postsId: ID!, $commentBody: String!) {
-    addReaction(postsId: $postsId, commentBody: $commentBody) {
+    addComment(postsId: $postsId, commentBody: $commentBody) {
       _id
       commentCount
       comments {
