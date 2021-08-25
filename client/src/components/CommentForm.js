@@ -4,7 +4,6 @@ import { QUERY_POST } from "../utils/queries";
 import { ADD_COMMENT } from "../utils/mutations";
 
 const CommentForm = () => {
-
   const [newComment, setNewComment] = useState({
     commentBody: "",
   });
@@ -32,23 +31,35 @@ const CommentForm = () => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <textarea
-        className="form-input"
-        placeholder="comment"
-        type="text"
-        id="comment"
-        name="commentBody"
-        value={newComment.commentBody}
-        onChange={handleChange}
-      />
-      <button className="btn d-block w-100" type="submit">
-        Submit
-      </button>
-    </form>
+    <div className="container mb-5">
+      <hr />
+      <h4 className="pt-4">Comments</h4>
+      <div className="row">
+        {/* <div class="col-1"></div> */}
+        <div className="mb-3 commentBox col-10">
+          <form onSubmit={handleFormSubmit}>
+            <label
+              htmlFor="exampleFormControlTextarea1"
+              className="form-label"
+            />
+            <textarea
+              className="form-control"
+              rows={3}
+              placeholder="comment"
+              type="text"
+              id="comment"
+              name="commentBody"
+              value={newComment.commentBody}
+              onChange={handleChange}
+            />
+          </form>
+          <button className="btn d-block w-100" type="submit">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
-
-
 
 export default CommentForm;
