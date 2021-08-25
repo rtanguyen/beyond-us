@@ -9,6 +9,7 @@ const CommentForm = () => {
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="container mb-5">
         <hr />
         <h4 className="pt-4">
@@ -40,6 +41,8 @@ const CommentForm = () => {
          ))}
          </div>
 =======
+=======
+>>>>>>> a2f22ac2ab192c83a2f45981687d878c67e65221
   const [addComment, { error }] = useMutation(ADD_COMMENT);
   const handleChange = (event) => {
     setNewComment({
@@ -89,7 +92,10 @@ const CommentForm = () => {
             Submit
           </button>
         </div>
+<<<<<<< HEAD
 >>>>>>> 6cd2bde107a38977065fa20908feef30758b1649
+=======
+>>>>>>> a2f22ac2ab192c83a2f45981687d878c67e65221
       </div>
     </div>
   );
