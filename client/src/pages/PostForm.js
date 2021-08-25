@@ -153,29 +153,29 @@ const PostForm = () => {
           <div className="col-8 pl-2 pr-2">
             <form onSubmit={handleFormSubmit}>
               <div className="mb-3 text-center">
-                <h6>Add a photo</h6>
-                {/* <ImageUploader /> */}
                 {/* IMAGE UPLOADER */}
                 {image ? (
                   <img
                     className="object-contain rounded-lg"
                     src={image.replace("upload/", "upload/w_600/")}
-                    style={{ height: 400, width: 600 }}
+                    // style={{ height: 400, width: 600 }}
                   />
                 ) : (
                   <div
                     className="bg-gray-200 border-4 border-dashed border-gray-400 rounded-lg"
-                    style={{ height: 400, width: 600 }}
+                    // style={{ height: 400, width: 600 }}
                   >
+                    <h6>Add a photo</h6>
                     <form className="flex justify-center items-center h-full">
                       {progress === 0 ? (
                         <div className="text-gray-700 text-center">
                           <button
-                            className="bg-blue-600 hover:bg-blue-800 text-white font-bold px-4 py-2 rounded block m-auto"
+                            className="btn upload mt-2 btn-sm btn-outline-dark"
+                            id="upload_widget"
                             onClick={handleImageUpload}
                             type="button"
                           >
-                            Browse
+                            browse
                           </button>
                         </div>
                       ) : (
@@ -199,14 +199,14 @@ const PostForm = () => {
                   ></input>
                   <button onClick={uploadImage}>Upload</button>
                 </div> */}
-                <button
+                {/* <button
                   type="button"
                   className="btn upload mt-2 btn-sm btn-outline-dark"
                   id="upload_widget"
                   onClick={toggleWidget}
                 >
                   browse
-                </button>
+                </button> */}
               </div>
               <div className="mb-3 addPost">
                 <label
