@@ -145,3 +145,7 @@ a {
 .form-input {
   width: 100% !important;
 }
+
+#p_wrap {
+  white-space: pre-line;
+}
