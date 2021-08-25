@@ -9,7 +9,8 @@ const PostlogHeader = () => {
       <div className="container-fluid nav-container">
         <div className="col-1" />
         <div className="col-4">
-          <a className="navbar-brand mainLogo" href="#">
+          <a className="navbar-brand mainLogo">
+            <Link to={`/home`}></Link>
             <img src={LogoPic} className="logoNav" style={{ width: "10%" }} />
           </a>
         </div>
@@ -47,9 +48,11 @@ const PostlogHeader = () => {
                   News
                 </a>
               </li>
-              {/* <li className="nav-item login">
-                <button type="button" className="btn btn-outline-light logButton btn-sm"><a className="nav-link text-light" href="#">Log In</a></button>
-              </li> */}
+              <li className="nav-item">
+                <a className="nav-link" href="#news">
+                  <Link to={`/add`}>Create</Link>
+                </a>
+              </li>
             </ul>
           </div>
         </div>

@@ -1,10 +1,11 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
+import { QUERY_POST } from "../utils/queries";
 import CommentForm from "../components/CommentForm";
-import {QUERY_POST} from '../utils/queries'
 import CommentList from "../components/CommentList";
+import PostlogHeader from "../components/PostlogHeader";
 
 const Singlepost = (props) => {
   const { id: postId } = useParams();
@@ -14,22 +15,19 @@ const Singlepost = (props) => {
 
   const post = data?.post || {};
 
-console.log(post);
+  console.log(post);
   return (
     <>
+      <PostlogHeader />
       <div>
         {/* SINGLE PAGE */}
         <div className="singlePost">
           <div className="column">
             <div className="row">
               <div className="col-12 mt-3">
-                <h2 className="text-center fw-bolder spTitle">
-                  {post.title}
-                </h2>
+                <h2 className="text-center fw-bolder spTitle">{post.title}</h2>
                 <br />
-                <h5 className="text-center spSubtitle">
-                  {post.subtitle}
-                </h5>
+                <h5 className="text-center spSubtitle">{post.subtitle}</h5>
                 <p className="spDate text-center"></p>
               </div>
             </div>
@@ -59,21 +57,22 @@ console.log(post);
           </div>
         </div>
       </div>
-  
-      <div class="container mb-5">
 
-      <div class="row">
-        <CommentForm postsId={post._id}/>
-        <div class="col-2"></div>
-      </div>
-      <div className="postedComments container">
-            <div className="row pastComments" id="commentPast">
-                <div className="col-1" />
-                <CommentList comments={post.comments}/>
-                <div className="col-1" />
+      <div class="container mb-5">
+        <div class="row">
+          <CommentForm postsId={post._id} />
+          <div class="col-2"></div>
+        </div>
+        <div className="postedComments container">
+          <div className="row pastComments" id="commentPast">
+            <div className="col-1" />
+            <div classname="container">
+              <CommentList comments={post.comments} />
+              <div className="col-1" />
             </div>
+          </div>
+        </div>
       </div>
-    </div>
     </>
   );
 };

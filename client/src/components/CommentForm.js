@@ -3,18 +3,15 @@ import { useMutation } from "@apollo/client";
 import { QUERY_POST } from "../utils/queries";
 import { ADD_COMMENT } from "../utils/mutations";
 
-const CommentForm = ({postsId}) => {
+const CommentForm = ({ postsId }) => {
   const [newComment, setNewComment] = useState({
     commentBody: "",
   });
-    
 
   const [addComment, { error }] = useMutation(ADD_COMMENT);
+
   const handleChange = (event) => {
-    setNewComment({
-      ...newComment,
-      [event.target.name]: event.target.value,
-    });
+    setNewComment(event.target.value);
   };
 
   const handleFormSubmit = async (event) => {
@@ -53,9 +50,9 @@ const CommentForm = ({postsId}) => {
               value={newComment.commentBody}
               onChange={handleChange}
             />
-          <button className="btn d-block w-100" type="submit">
-            Submit
-          </button>
+            <button className="btn d-block w-100" type="submit">
+              Submit
+            </button>
           </form>
         </div>
       </div>
