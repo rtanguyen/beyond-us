@@ -52,7 +52,7 @@ const Singlepost = (props) => {
           <div className="spBody py-5 row">
             <div className="col-2" />
             <div className="col-8">
-              <p className="spBodyContent">{post.bodyText}</p>
+              <p className="spBodyContent" id="p_wrap">{post.bodyText}</p>
               {/* <div className="writtenBy">
                 <p className="author text-end">Written by: Mimi Vo</p>
               </div> */}
