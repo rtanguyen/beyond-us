@@ -58,24 +58,24 @@ nav {
   padding: 0px 40px 0px 40px; 
 }
 
-.joinCause {
+/* .joinCause {
   background-color: lightgray;
 }
 
 .joinCause:hover {
   background-color: yellow;
-}
-.actionContainer {
+} */
+/* .actionContainer {
   background-color: thistle;
-}
+} */
 
 .signUpCTA {
   text-decoration: none;
 }
 
-.disco {
+/* .disco {
   background-color: thistle;
-}
+} */
 
 .signUpForm {
   box-shadow: 4px 2px 3px 4px lightgray;
