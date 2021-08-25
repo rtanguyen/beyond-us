@@ -78,7 +78,7 @@ const resolvers = {
     },
     addComment: async (parent, { postsId, commentBody }, context) => {
       if (context.user) {
-        const updatedPost = await Thought.findOneAndUpdate(
+        const updatedPost = await Post.findOneAndUpdate(
           { _id: postsId },
           {
             $push: {

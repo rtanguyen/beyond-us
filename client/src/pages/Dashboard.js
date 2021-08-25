@@ -11,13 +11,13 @@ import post from "../assets/postSeed";
 import donate from "../assets/donateSeed";
 import { Link } from "react-router-dom";
 import { QUERY_POSTS } from "../utils/queries";
-import PostForm from "./PostForm";
+import CommentForm from "../components/CommentForm";
 
 function Dashboard() {
   return (
     <>
       <PostlogHeader />
-      <PostForm />
+      <CommentForm />
       <div>
         {/* DASHBOARD */}
         <div className="dashboard">
