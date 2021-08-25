@@ -1,204 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/style.css" />
-
-    <!-- FONT AWESOME IMPORT  -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css"/>
+    <!-- FONT AWESOME IMPORT  --> 
     <script
-      src="https://kit.fontawesome.com/f78f1848e0.js"
-      crossorigin="anonymous"
-    ></script>
+			src="https://kit.fontawesome.com/f78f1848e0.js"
+			crossorigin="anonymous"
+		></script>
 
-    <!-- GOOGLE FONT IMPORT  -->
+    <!-- GOOGLE FONT IMPORT  --> 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chicle&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chicle&display=swap');
     </style>
+
     <title>Beyond Us</title>
-    <link rel="shortcut icon" type="image/jpg" href="BU-Logo_Beyond Us.png" />
-  </head>
-  <body>
-    <!-- NAVIGATION -->
-    <nav
-      className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav"
-    >
-      <div className="container-fluid nav-container">
-        <div className="col-1"></div>
-        <div className="col-4">
-          <a className="navbar-brand mainLogo" href="#"
-            ><img
-              src="BU-Logo_Beyond Us.png"
-              className="logoNav"
-              style="width: 15%"
-          /></a>
-        </div>
-        <div className="col-2"></div>
-        <div className="col-3">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdownLeft">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#"
-                  >Happening Now</a
-                >
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#"
-                  >Trending</a
-                >
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">My Account</a>
-              </li>
-              <!-- <li className="nav-item login">
-                        <button type="button" className="btn btn-outline-light logButton btn-sm"><a className="nav-link text-light" href="#">Log In</a></button>
+    <link rel="shortcut icon" type="image/jpg" href="./assets/img/BU-Logo_Beyond Us.png"/>
+</head>
+<body>
+  <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav">
+        <div class="container-fluid nav-container">
+            <div class="col-1"></div>
+            <div class="col-4">
+                <a class="navbar-brand mainLogo" href="#"><img src="./assets/img/BU-Logo_Beyond Us.png" class="logoNav" style="width: 10%;"></a>
+            </div>
+            <div class="col-2"></div>
+            <div class="col-3">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdownLeft">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#happeningnow">Happening Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Trending</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Account</a>
+                    </li>
+                    <!-- <li class="nav-item login">
+                        <button type="button" class="btn btn-outline-light logButton btn-sm"><a class="nav-link text-light" href="#">Log In</a></button>
                     </li> -->
-            </ul>
-          </div>
+                </ul>
+            </div>
+            </div>
+            <div class="col-1"><a class="nav-link text-danger fs-bolder" href="#">Log Out</a></div>
+            <div class="col-1"></div>
         </div>
-        <div className="col-1">
-          <a className="nav-link text-danger fs-bolder" href="#">Log Out</a>
-        </div>
-        <div className="col-1"></div>
-      </div>
     </nav>
+    
+     
+    <!-- DASHBOARD -->
+    <div class="causeHeader">
+        <div class="container postTitles pt-3 pb-3 mb-2 rounded">
+            <h3 class="happeningNow text-center fw-bolder" id="shareYourCause">Share Your Cause</h3>
+            <p class="text-center">Write you own post on issues and topics that you are passionate about. <br> Spread awareness on humanitarian, animal, environmental issues and more.</p>
+            </div>
+        </div>
+    </div>
 
-    <!-- SINGLE PAGE -->
+<!-- User Post  -->
+<div class="container">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 pl-2 pr-2">
+            <div class="mb-3 text-center">   
+                <h6>Add a photo</h6>
+                <!-- <input type="text" class="form-control" placeholder="Image" aria-label="Recipient's username" aria-describedby="button-addon2" id="browse-input"> -->
+                <button type="button" class="btn upload mt-2 btn-sm btn-outline-dark" id="upload_widget">browse</button>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" id="title">Title</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" id="subtitle">Subtitle</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+              <div class="mb-3">
+                <!-- <label for="exampleFormControlInput1" class="form-label" id="subtitle">Browse Image</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"> -->
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label" id="body">Body Message</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label" id="orgLink">Oraganization URL</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="https://www.beyondus.com">
+              </div>
+              <div class="text-end">
+                <button class="btn btn-sm btn-outline-light logButton signUpCTA " type="submit"><a href="#" class="submitBut nav-link text-light">Submit</a></button>
+              </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
 
-    <!-- FOOTER -->
-    <!-- <hr/> -->
-    <footer>
-      <div className="prefooter pt-5 pb-5">
-        <div className="row text-center">
-          <div className="col-2 fw-bold footMain"></div>
-          <div className="col-2 fw-bold footMain">MAIN</div>
-          <div className="col-2 fw-bold footMain">LEARN MORE</div>
-          <div className="col-2 fw-bold footMain">RESOURCES</div>
-          <div className="col-2 fw-bold footMain">
-            <a
-              className="sm px-2"
-              href="https://twitter.com/?lang=en"
-              target="_blank"
-              ><i className="fab fa-twitter socialMedia fa-2x"></i
-            ></a>
-          </div>
-          <div className="col-2 fw-bold footMain"></div>
+<!-- DISCLAIMER -->
+    <div class="container mt-5">
+        <div class="row disclaim">
+            <p class="disclaimer text-end fw-bold">*Any posts that falls against our be a person policy and code will be removed and users will be blocked from the platform PERMANENTLY. Do better.</p>
         </div>
-        <div className="row text-center">
-          <div className="col-2 fw-bold footsies footMain"></div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Urgent Causes</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Our Mission</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Help</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a
-              className="sm px-2"
-              href="https://www.pinterest.com/"
-              target="_blank"
-              ><i className="fab fa-pinterest-p socialMedia fa-2x"></i
-            ></a>
-          </div>
-          <div className="col-2 fw-bold footsies"></div>
+    </div>        
+
+
+                <!-- <div class="col-2">
+                    <br>
+                    <h3 class="causes text-center fw-bolder">Trending</h3>
+                    <hr>
+                        <p class="text-center">Twitter</p>
+                    <p class="text-center">
+                        <a href="https://twitter.com/search?q=%23saveAfghans&src=typed_query">#saveAfghans</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23Kabul&src=typed_query">#Kabul</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23Afghanistan&src=typed_query">#Afghanistan</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23taliban&src=typed_query">#taliban</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23support&src=typed_query">#support</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23america&src=typed_query">#america</a>
+                        <br>
+                        <a  href="https://twitter.com/search?q=%23saveAfghans&src=typed_query">#saveAfghans</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23kabulafghanistan&src=typed_que">#kabulafghanistan</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23peace&src=typed_query">#peace</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23covid19">#Covid19</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23Coronavirus&src=typed_query">#Coronavirus</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23Covid&src=typed_query">#covid</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23ClimateStrike&src=typeahead_click">#ClimateStrike</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23ClimateCrisis&src=typeahead_click">#ClimateCrisis</a>
+                        <br>
+                        <a href="https://twitter.com/search?q=%23climatechange&src=typed_query">#climatechange</a>
+                        <br>
+                    </p>
+                    <br>
+                    <h3 class="news text-center fw-bolder">News</h3>
+                    <hr>
+                    <div class="my-3">
+                        <div class="card" style="width: 15rem;">
+                            <img src="./assets/img/afghan.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <p class="card-text text-center text-uppercase"><a href ="https://www.nytimes.com/live/2021/08/17/world/taliban-afghanistan-news" class="sm">Fearful people of Afghanistan in search of a way out</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <div class="card mt=3" style="width: 15rem;">
+                            <img src="./assets/img/covid2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center text-uppercase"><a href="https://www.nytimes.com/live/2021/08/20/world/covid-delta-variant-vaccine" class="sm">F.D.A approved Pfizer on the way</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <div class="card mt=3" style="width: 15rem;">
+                            <img src="./assets/img/haiti4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text text-center text-uppercase"><a href="https://www.npr.org/2021/08/20/1029921352/haitian-quake-victims-rush-aid-sites-and-take-food-and-supplies" class="sm">Haitian quake survivors in need of aid</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
         </div>
-        <div className="row text-center">
-          <div className="col-2 fw-bold footsies"></div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Feed</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Fundraise</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Terms</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a
-              className="sm px-2"
-              href="https://www.facebook.com/"
-              target="_blank"
-              ><i className="fab fa-facebook-square socialMedia fa-2x"></i
-            ></a>
-          </div>
-          <div className="col-2 fw-bold footsies"></div>
+
+   
+
+
+     <!-- FOOTER -->
+     <!-- <hr/> -->
+     <footer>
+      <div class="prefooter pt-5 pb-5">
+        <div class="row text-center">
+          <div class="col-2 fw-bold footMain"></div>
+          <div class="col-2 fw-bold footMain">MAIN</div>
+          <div class="col-2 fw-bold footMain">LEARN MORE</div>
+          <div class="col-2 fw-bold footMain">RESOURCES</div>
+          <div class="col-2 fw-bold footMain"><a class="sm px-2" href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter socialMedia fa-2x"></i></a></div>
+          <div class="col-2 fw-bold footMain"></div>
         </div>
-        <div className="row text-center">
-          <div className="col-2 fw-bold footsies"></div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Sign Up</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Volunteer</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Contact Us</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a
-              className="sm px-2"
-              href="https://www.instagram.com/"
-              target="_blank"
-              ><i className="fab fa-instagram socialMedia fa-2x"></i
-            ></a>
-          </div>
-          <div className="col-2 fw-bold footsies"></div>
+        <div class="row text-center">
+          <div class="col-2 fw-bold footsies footMain"></div>
+          <div class="col-2 footsm footsies"><a class="sm" href="#">Urgent Causes</a></div>
+          <div class="col-2 footsm footsies"><a class="sm" href="#">Our Mission</a></div>
+          <div class="col-2 footsm footsies"><a class="sm" href="#">Help</a></div>
+          <div class="col-2 footsm footsies"><a class="sm px-2" href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p socialMedia fa-2x"></i></a></div>
+          <div class="col-2 fw-bold footsies"></div>
         </div>
-        <div className="row text-center">
-          <div className="col-2 fw-bold footsies"></div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">Log In</a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#"></a>
-          </div>
-          <div className="col-2 footsm footsies">
-            <a className="sm" href="#">FAQs</a>
-          </div>
-          <div className="col-2 footsm footsies"></div>
-          <div className="col-2 fw-bold footsies"></div>
+        <div class="row text-center">
+          <div class="col-2 fw-bold footsies"></div>
+          <div class="col-2 footsm footsies"><a class="sm" href="#">Feed</a></div>
+          <div class="col-2 footsm footsies"><a class="sm" href="#">Fundraise</a></div>
+          <div class="col-2 footsm footsies"><a class="sm" href="#">Terms</a></div>
+          <div class="col-2 footsm footsies"><a class="sm px-2" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square socialMedia fa-2x"></i></a></div>
+          <div class="col-2 fw-bold footsies"></div>
         </div>
+        <div class="row text-center">
+          <div class="col-2 fw-bold footsies"></div>
+          <div class="col-2 footsm footsies"><a class="sm" href="#">Sign Up</a></div>
+          <div class="col-2 footsm footsies"><a class="sm" href="#">Volunteer</a></div>
+          <div class="col-2 footsm footsies"><a class="sm" href="#">Contact Us</a></div>
+          <div class="col-2 footsm footsies"><a class="sm px-2" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram socialMedia fa-2x"></i></a></div>
+          <div class="col-2 fw-bold footsies"></div>
+        </div>
+        <div class="row text-center"> 
+            <div class="col-2 fw-bold footsies"></div>
+            <div class="col-2 footsm footsies"><a class="sm" href="#">Log In</a></div>
+            <div class="col-2 footsm footsies"><a class="sm" href="#"></a></div>
+            <div class="col-2 footsm footsies"><a class="sm" href="#">FAQs</a></div>
+            <div class="col-2 footsm footsies"></div>
+            <div class="col-2 fw-bold footsies"></div>
+          </div>
       </div>
-      <!-- DIVIDER -->
+<!-- DIVIDER -->
       <!-- <hr/> -->
-      <div className="bottomFooter pt-4">
-        <div className="content has-text-centered footerThanks">
-          <div className="row text-center">
-            <div className="col-12 footsm">
+      <div class="bottomFooter pt-4">
+        <div class="content has-text-centered footerThanks">
+          <div class="row text-center">
+            <div class="col-12 footsm">
               <p>BEYONDUS.COM © 2021. ALL RIGHTS RESERVED</p>
             </div>
           </div>
@@ -207,10 +248,8 @@
     </footer>
 
     <!-- BOOTSTRAP -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
   </body>
 </html>
