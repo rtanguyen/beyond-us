@@ -110,7 +110,7 @@ const LoginForm = (props) => {
                   <p>New around here? </p>
                   {/* <Link to="/">Create your account</Link> */}
                   <HashLink smooth to="/#jointhecause">
-                    Create your account
+                     Create your account
                   </HashLink>
                 </div>
               </form>

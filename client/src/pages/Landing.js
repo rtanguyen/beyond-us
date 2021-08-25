@@ -47,7 +47,7 @@ const Landing = () => {
                         </button>
                       </p>
                     </div>
-                    <div className="col-4">
+                    <div className="col-6">
                       <img
                         src={saveChild}
                         className="img-fluid"
@@ -217,7 +217,7 @@ const Landing = () => {
         <div className="container joinUsTitle">
           <div className="row">
             <div className="col-1" />
-            <div className="col-6">
+            <div className="col-5">
               <h2>Join the Cause</h2>
               <p>
                 Sign up and join everyday heroes around the world to keep up
@@ -233,7 +233,7 @@ const Landing = () => {
                 <span className="fw-bold">Together we can.</span>
               </p>
             </div>
-            <div className="col-1" />
+            {/* <div className="col-1" /> */}
             <SignupForm />
             <div className="col-1" />
           </div>
