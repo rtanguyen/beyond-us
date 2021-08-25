@@ -10,11 +10,14 @@ import PostlogHeader from "../components/PostlogHeader";
 import post from "../assets/postSeed";
 import donate from "../assets/donateSeed";
 import { Link } from "react-router-dom";
+import { QUERY_POSTS } from "../utils/queries";
+import PostForm from "./PostForm";
 
 function Dashboard() {
   return (
     <>
       <PostlogHeader />
+      <PostForm />
       <div>
         {/* DASHBOARD */}
         <div className="dashboard">

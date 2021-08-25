@@ -6,20 +6,20 @@ const postSchema = new Schema(
   {
     title: {
       type: String,
-      required: true,
+      // required: true,
       unique: true,
       trim: true,
     },
     subtitle: {
       type: String,
-      required: true,
+      // required: true,
       unique: true,
       trim: true,
       minlength: 1,
     },
     bodyText: {
       type: String,
-      required: true,
+      // required: true,
       unique: true,
       trim: true,
       minlength: 1,
@@ -37,7 +37,7 @@ const postSchema = new Schema(
     },
     username: {
       type: String,
-      required: true,
+      // required: true,
     },
 
     comments: [commentSchema],

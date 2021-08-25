@@ -40,13 +40,16 @@ export const ADD_COMMENT = gql`
 `;
 
 export const ADD_POST = gql`
-  mutation addPost($bodyText: String!) {
-    addPost(bodyText: $bodyText) {
+  mutation addPost($input: PostDetails) {
+    addPost(input: $input) {
       _id
+      title
       subtitle
       bodyText
       createdAt
       orgLink
+      image
+      username
       commentCount
       comments {
         _id
