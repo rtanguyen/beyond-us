@@ -4,25 +4,28 @@ import { QUERY_POST } from "../utils/queries";
 import { ADD_COMMENT } from "../utils/mutations";
 
 const CommentForm = ({ postsId }) => {
-  const [newComment, setNewComment] = useState({
-    commentBody: "",
-  });
+  const [commentBody, setBody] = useState("");
 
   const [addComment, { error }] = useMutation(ADD_COMMENT);
 
   const handleChange = (event) => {
-    setNewComment(event.target.value);
+    setBody(
+      event.target.value
+      // setNewComment({
+      //   ...newComment,
+      //   [event.target.name]: event.target.value,
+    );
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
+    console.log(commentBody);
     try {
       const { data } = await addComment({
-        variables: { newComment, postsId },
+        variables: { commentBody, postsId },
       });
       console.log(data);
-      setNewComment("");
+      setBody("");
     } catch (e) {
       console.error(e);
     }
@@ -47,7 +50,7 @@ const CommentForm = ({ postsId }) => {
               type="text"
               id="comment"
               name="commentBody"
-              value={newComment.commentBody}
+              // value={data.comments.commentBody}
               onChange={handleChange}
             />
             <button className="btn d-block w-100" type="submit">
