@@ -33,7 +33,7 @@ export const ADD_COMMENT = gql`
         _id
         commentBody
         username
-        createdAt
+
       }
     }
   }
@@ -46,7 +46,7 @@ export const ADD_POST = gql`
       title
       subtitle
       bodyText
-      createdAt
+
       orgLink
       image
       username

@@ -18,7 +18,8 @@ const resolvers = {
     },
     posts: async (parent, { username }) => {
       const params = username ? { username } : {};
-      return Posts.find(params).sort({ createdAt: -1 });
+      // return Posts.find(params).sort({ createdAt: -1 });
+      return Posts.find();
     },
     //single post
     post: async (parent, { _id }) => {
@@ -63,17 +64,16 @@ const resolvers = {
       return { token, user };
     },
     addPost: async (parent, { input }, context) => {
+      
       if (context.user) {
-        const post = await Posts.create({
-          input,
-          username: context.username,
-        });
+        console.log(input);
+        const post = await Posts.create(input);
 
-        await User.findByIdAndUpdate(
-          { _id: context.user._id },
-          { $push: { posts: input } },
-          { new: true }
-        );
+        // await User.findByIdAndUpdate(
+        //   { _id: context.user._id },
+        //   { $push: { Posts: input } },
+        //   { new: true }
+        // );
         return post;
       }
       throw new AuthenticationError("You must be logged in to add a post.");

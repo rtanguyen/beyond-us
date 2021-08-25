@@ -30,11 +30,11 @@ const postSchema = new Schema(
     orgLink: {
       type: String,
     },
-    createdAt: {
-      type: Date,
-      default: Date.now,
-      get: (timestamp) => dateFormat(timestamp),
-    },
+    // createdAt: {
+    //   type: Date,
+    //   default: Date.now,
+    //   get: timestamp => dateFormat(timestamp)
+    // },
     username: {
       type: String,
       // required: true,

@@ -12,7 +12,6 @@ const typeDefs = gql`
     title: String
     subtitle: String
     bodyText: String
-    createdAt: String
     image: String
     orgLink: String
     username: String
@@ -23,14 +22,13 @@ const typeDefs = gql`
     _id: ID
     commentBody: String
     username: String
-    createdAt: String
+    
   }
   input PostDetails {
     _id: ID
     title: String!
     subtitle: String
     bodyText: String!
-    createdAt: String
     image: String
     orgLink: String
     username: String
