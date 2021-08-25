@@ -5,71 +5,47 @@ import { Link } from "react-router-dom";
 
 const PostlogHeader = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav">
-      <div className="container-fluid nav-container">
-        <div className="col-1" />
-        <div className="col-4">
-          {/* <a className="navbar-brand mainLogo"> */}
-          <Link to={"/home"}>
-            <img src={LogoPic} className="logoNav" style={{ width: "10%" }} />
-          </Link>
-        </div>
-        <div className="col-2" />
-        <div className="col-3">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdownLeft">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                {/* <a
-                  className="nav-link"
-                  aria-current="page"
-                  href="#happeningnow">
-                </a>
-                 */}
-                <Link to={`/home`} className="nav-link">
-                  Happening Now
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to={`/home`} className="nav-link">
-                  Trending
-                </Link>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#news">
-                  News
-                </a>
-              </li>
-              <li className="nav-item">
-                <Link to={`/add`} className="nav-link">
-                  Create
-                </Link>
-              </li>
-            </ul>
+    <header className="header">
+        {/* NAVIGATION */}
+        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav px-5">
+          <div className="container-fluid nav-container ">
+            <Link to={"/"}>
+                <img src={LogoPic} className="logoNav navbar-brand mainLogo" style={{ width: "13%" }} />
+              </Link>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon" />
+              <span />
+              <span />
+            </button>
+            <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                    <Link to={`/home`} className="nav-link">
+                        Happening Now
+                      </Link>
+                </li>
+                <li className="nav-item">
+                    <Link to={`/home`} className="nav-link">
+                        Trending
+                      </Link>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#news">
+                        News
+                      </a>
+                </li>
+                <li className="nav-item">
+                    <Link to={`/add`} className="nav-link">
+                        Create
+                      </Link>
+                </li>
+                <button type="button" className="btn btn-outline-light logButton btn-sm login ms-2"><Link to="/" className="nav-link text-light">Log out</Link></button>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="col-1">
-          <button
-            type="button"
-            className="btn btn-outline-light logButton btn-sm"
-          >
-            <Link to="/">Log out</Link>
-          </button>
-        </div>
-        <div className="col-1" />
-      </div>
-    </nav>
-  );
-};
+        </nav>
+      </header>
+    );
+  };
 
 export default PostlogHeader;

@@ -5,62 +5,36 @@ import { Link } from "react-router-dom";
 
 const PrelogHeader = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav">
-      <div className="container-fluid nav-container">
-        <div className="col-1" />
-        <div className="col-4">
-          <Link to={"/"}>
-            <img src={LogoPic} className="logoNav" style={{ width: "10%" }} />
+    <header className="header">
+    {/* NAVIGATION */}
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav px-5">
+      <div className="container-fluid nav-container ">
+      <Link to={"/"} className="navbar-brand mainLogo">
+            <img src={LogoPic} className="logoNav" style={{ width: "13%" }} />
           </Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon" />
+          <span />
+          <span />
+        </button>
+        <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link active" href="#ourmission">Our Mission</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#howtohelp">How to Help</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#jointhecause">Join the Cause</a>
+            </li>
+          </ul>
+          <button type="button" className="btn btn-outline-light logButton btn-sm login ms-2"><Link to="/login" className="nav-link text-light">Log In</Link></button>
         </div>
-        <div className="col-2" />
-        <div className="col-3">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdownLeft">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#ourmission">
-                  Our Mission
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#howtohelp">
-                  How to Help
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#jointhecause">
-                  Join the Cause
-                </a>
-              </li>
-              {/* <li className="nav-item login">
-                <button type="button" className="btn btn-outline-light logButton btn-sm"><a className="nav-link text-light" href="#">Log In</a></button>
-              </li> */}
-            </ul>
-          </div>
-        </div>
-        <div className="col-1">
-          <button
-            type="button"
-            className="btn btn-outline-light logButton btn-sm"
-          >
-            <Link to="/login">Log In</Link>
-          </button>
-        </div>
-        <div className="col-1" />
       </div>
     </nav>
-  );
+  </header>
+    );
 };
 
 export default PrelogHeader;
