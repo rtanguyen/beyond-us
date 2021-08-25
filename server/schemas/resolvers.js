@@ -59,6 +59,7 @@ const resolvers = {
         throw new AuthenticationError("wrong password");
       }
       const token = signToken(user);
+      console.log(token, user);
       return { token, user };
     },
     addPost: async (parent, { input }, context) => {
@@ -69,16 +70,17 @@ const resolvers = {
         });
 
         await User.findByIdAndUpdate(
-          { _id: contex.user._id },
+          { _id: context.user._id },
           { $push: { posts: input } },
           { new: true }
         );
-        throw new AuthenticationError("You must be logged in to add a post.");
+        return post;
       }
+      throw new AuthenticationError("You must be logged in to add a post.");
     },
     addComment: async (parent, { postsId, commentBody }, context) => {
       if (context.user) {
-        const updatedPost = await Thought.findOneAndUpdate(
+        const updatedPost = await Post.findOneAndUpdate(
           { _id: postsId },
           {
             $push: {

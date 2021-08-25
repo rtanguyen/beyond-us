@@ -16,36 +16,43 @@ const PostForm = () => {
   });
 
   const handleChange = (event) => {
-    setNewPost(event.target.value);
+    //  const { name, value } = event.target.value;
+
+    setNewPost({
+      ...newPost,
+      [event.target.name]: event.target.value,
+    });
   };
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log({ newPost });
+    console.log({ ...newPost });
     try {
-      await addPost({
-        variables: { newPost },
+      const { data } = await addPost({
+        variables: { ...newPost },
       });
+      const { title, subtitle, bodyText, createdAt, orgLink, image } =
+        data.addPost;
       setNewPost("");
     } catch (e) {
       console.error(e);
     }
   };
 
-  const [addPost, { error }] = useMutation(ADD_POST, {
-    update(cache, { data: { addPost } }) {
-      try {
-        const { posts } = cache.readQuery({ query: QUERY_POSTS });
+  const [addPost, { error }] = useMutation(ADD_POST);
+  //     update(cache, { data: { addPost } }) {
+  //       try {
+  //         const { posts } = cache.readQuery({ query: QUERY_POSTS });
 
-        cache.writeQuery({
-          query: QUERY_POSTS,
-          data: { posts: [addPost, ...posts] },
-        });
-      } catch (e) {
-        console.error(e);
-      }
-    },
-  });
+  //         cache.writeQuery({
+  //           query: QUERY_POSTS,
+  //           data: { posts: [addPost, ...posts] },
+  //         });
+  //       } catch (e) {
+  //         console.error(e);
+  //       }
+  //     },
+  //   });
 
   const toggleWidget = (event) =>
     window.cloudinary.openUploadWidget(
@@ -54,7 +61,9 @@ const PostForm = () => {
         uploadPreset: "beyond-us",
       },
       (error, result) => {
-        console.log("Done! Here is the image info: ", result.info);
+        console.log(result.info);
+        console.log(result.info.url);
+
         setNewPost({ ...newPost, image: result.info.url });
       }
     );
@@ -66,6 +75,7 @@ const PostForm = () => {
         placeholder="Title"
         type="text"
         id="title"
+        name="title"
         value={newPost.title}
         onChange={handleChange}
       />
@@ -73,6 +83,7 @@ const PostForm = () => {
         className="form-input"
         type="text"
         id="subtitle"
+        name="subtitle"
         value={newPost.subtitle}
         onChange={handleChange}
       />
@@ -80,6 +91,7 @@ const PostForm = () => {
         className="form-input"
         type="text"
         id="body"
+        name="bodyText"
         value={newPost.bodyText}
         onChange={handleChange}
       />
@@ -87,6 +99,7 @@ const PostForm = () => {
         className="form-input"
         type="text"
         id="orgLink"
+        name="orgLink"
         value={newPost.orgLink}
         onChange={handleChange}
       />
