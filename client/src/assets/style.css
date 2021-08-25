@@ -140,3 +140,7 @@ a {
     width: 6rem;
   }
 }
+
+.form-input {
+  width: 100% !important;
+}

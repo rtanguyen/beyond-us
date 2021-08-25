@@ -3,7 +3,8 @@ import React from "react";
 const CommentList = ({ comments }) => {
   console.log(comments);
   return (
-    <div className="container">
+    // <div className="container">
+    <div>
       {comments &&
         comments.map((comment) => (
           <div key="{comment._id}" className="row">

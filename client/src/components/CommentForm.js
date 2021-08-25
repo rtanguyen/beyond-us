@@ -5,16 +5,15 @@ import { ADD_COMMENT } from "../utils/mutations";
 
 const CommentForm = ({ postsId }) => {
   const [commentBody, setBody] = useState("");
+  const [characterCount, setCharacterCount] = useState(0);
 
   const [addComment, { error }] = useMutation(ADD_COMMENT);
 
   const handleChange = (event) => {
-    setBody(
-      event.target.value
-      // setNewComment({
-      //   ...newComment,
-      //   [event.target.name]: event.target.value,
-    );
+    if (event.target.value.length >= 1) {
+      setBody(event.target.value);
+      setCharacterCount(event.target.value.length);
+    }
   };
 
   const handleFormSubmit = async (event) => {
@@ -24,8 +23,8 @@ const CommentForm = ({ postsId }) => {
       const { data } = await addComment({
         variables: { commentBody, postsId },
       });
-      console.log(data);
       setBody("");
+      setCharacterCount(0);
     } catch (e) {
       console.error(e);
     }
@@ -46,11 +45,9 @@ const CommentForm = ({ postsId }) => {
             <textarea
               className="form-control"
               rows={3}
-              placeholder="comment"
               type="text"
               id="comment"
               name="commentBody"
-              // value={data.comments.commentBody}
               onChange={handleChange}
             />
             <button className="btn d-block w-100" type="submit">
