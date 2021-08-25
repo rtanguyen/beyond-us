@@ -9,9 +9,9 @@ const PrelogHeader = () => {
       <div className="container-fluid nav-container">
         <div className="col-1" />
         <div className="col-4">
-          <a className="navbar-brand mainLogo" href="#">
+          <Link to={"/"}>
             <img src={LogoPic} className="logoNav" style={{ width: "10%" }} />
-          </a>
+          </Link>
         </div>
         <div className="col-2" />
         <div className="col-3">

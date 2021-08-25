@@ -3,8 +3,11 @@ import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
 import { AdvancedImage } from "@cloudinary/react";
 import { Cloudinary } from "@cloudinary/base";
+
 import { ADD_POST } from "../utils/mutations";
 import { QUERY_POSTS } from "../utils/queries";
+
+import PostlogHeader from "../components/PostlogHeader";
 
 const PostForm = () => {
   const [newPost, setNewPost] = useState({
@@ -34,8 +37,9 @@ const PostForm = () => {
         variables: { input: { ...newPost } },
       });
       const { title, subtitle, bodyText, orgLink, image } = data.addPost;
+      console.log(title, subtitle, bodyText, orgLink, image);
       setNewPost("");
-      // window.location.assign("/home");
+      window.location.assign("/home");
     } catch (e) {
       console.error(e);
     }
@@ -56,10 +60,12 @@ const PostForm = () => {
     );
 
   return (
-    <div className="container">
-      <div className="dashboard">
+    <>
+      <PostlogHeader />
+      {/* <div className="container"> */}
+      <div>
         <div className="container postTitles pt-3 pb-3 mb-2 rounded">
-          <h3 className="happeningNow text-center fw-bolder" id="happeningnow">
+          <h3 className=" text-center fw-bolder" id="happeningnow">
             Share Your Cause
           </h3>
           <p className="text-center">
@@ -180,7 +186,8 @@ const PostForm = () => {
           </div>
         </div>
       </div>
-    </div>
+      {/* </div> */}
+    </>
   );
 };
 

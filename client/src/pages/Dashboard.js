@@ -20,22 +20,19 @@ import postSeed from "../assets/postSeed";
 function Dashboard() {
   const { loading, data } = useQuery(QUERY_POSTS);
   const posts = data?.posts || [];
-
+  console.log(posts);
   return (
     <>
       <PostlogHeader />
       {/* <PostForm /> */}
       <div>
         {/* DASHBOARD */}
-        <div className="dashboard">
+        <div>
           <div className="container postTitles pt-3 pb-3 mb-2 rounded">
             <div className="row">
               <div className="col-3"></div>
               <div className="col-7">
-                <h3
-                  className="happeningNow text-center fw-bolder"
-                  id="happeningnow"
-                >
+                <h3 className=" text-center fw-bolder" id="happeningnow">
                   Happening Now
                 </h3>
               </div>
@@ -228,16 +225,19 @@ function Dashboard() {
               </ul>
             </div>
 
-            <div className="col-7 pl-2 pr-2">
+            {/* ==============POSTS============== */}
 
-            {posts.map((post) => (
+            <div className="col-7 pl-2 pr-2">
+              {posts.map((post) => (
                 <div key={post._id}>
                   <div className="card" style={{ width: "100%" }}>
-                    <img
-                      src={post.image}
-                      className="card-img-top"
-                      alt="{post.title}"
-                    />
+                    {post.image && (
+                      <img
+                        src={post.image}
+                        className="card-img-top"
+                        alt={post.title}
+                      />
+                    )}
                     <div className="card-body">
                       <h5 className="card-title">{post.title}</h5>
                       <p className="card-text">{post.subtitle}</p>
@@ -257,11 +257,13 @@ function Dashboard() {
               {postSeed.map((post) => (
                 <div key={post._id}>
                   <div className="card" style={{ width: "100%" }}>
-                    <img
-                      src={post.image}
-                      className="card-img-top"
-                      alt="{post.title}"
-                    />
+                    {post.image && (
+                      <img
+                        src={post.image}
+                        className="card-img-top"
+                        alt={post.title}
+                      />
+                    )}
                     <div className="card-body">
                       <h5 className="card-title">{post.title}</h5>
                       <p className="card-text">{post.subtitle}</p>
@@ -303,107 +305,6 @@ function Dashboard() {
                   </div>
                 </div>
               ))}
-
-              {/* <div class="card" style="width: 100%;">
-                              <img src="./assets/img/protextafgans.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Help save Afghans</h5>
-                                <p class="card-text">As the Taliban has breached the capital city of Kabul, thousands of Afghans are fighting to find a way out. Humanitarians and soldiers on the ground are doing what they can, but here is our oppurtunity to help save hundreds of lives. Read more on the efforts to get planes on the ground to bring Afghans to safety. 
-                                </p>
-                                <div class="text-end">
-                                  <a href="#" class="btn btn-danger">Read more</a>
-                                </div>
-                              </div> */}
-              {/* <div className="my-4">
-                <div className="card mt-3" style={{ width: "100%" }}>
-                  <img src={covidImg1} className="card-img-top" alt="..." />
-                  <div className="card-body">
-                    <h5 className="card-title">COVID-19: Global Pandemic</h5>
-                    <p className="card-text">
-                      As we battle our everyday stresses, we are also at war
-                      with a contagion that has sweep across the globe. Medical
-                      workers are working endless hours to help protect us.
-                      Here's how we can help prevent the spread.
-                    </p>
-                    <div className="text-end">
-                      <a href="#" className="btn btn-danger">
-                        Read more
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              {/* <div className="my-4">
-                <div className="card mt-3" style={{ width: "100%" }}>
-                  <img src={haitiImg} className="card-img-top" alt="..." />
-                  <div className="card-body">
-                    <h5 className="card-title">
-                      Catostophic earthquake struck Haiti
-                    </h5>
-                    <p className="card-text">
-                      Haiti was recently hit by a 7.2 magnitude earthquake
-                      leaving over a thousand Haitians and counting dead. As
-                      rescue efforts are in progress, survivors, many left
-                      without homes and any possesions, are in search of aid,
-                      food, and supplies.
-                    </p>
-                    <div className="text-end">
-                      <a
-                        href="https://www.unicefusa.org/?form=FUNZZFVXQHV"
-                        className="btn btn-danger"
-                      >
-                        Donate now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              {/* <div class="card mt-3" style="width: 100%;">
-                              <img src="./assets/img/covid3.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <h5 class="card-title">COVID-19: Global Pandemic</h5>
-                                  <p class="card-text">As we battle our everyday stresses, we are also at war with a contagion that has sweep across the globe. Medical workers are working endless hours to help protect us. Here's how we can help prevent the spread.</p>
-                                  <div class="text-end">
-                                      <a href="#" class="btn btn-danger">Read more</a>
-                                  </div>
-                              </div>
-                          </div> */}
-              {/* <div className="my-4">
-                <div className="card mt-3" style={{ width: "100%" }}>
-                  <img
-                    src={climateChangeImg}
-                    className="card-img-top"
-                    alt="..."
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">Climate Change</h5>
-                    <p className="card-text">
-                      Our world is telling us that things are changing for the
-                      worst. As ice caps melts, deforestation continues, and the
-                      heat level around the world rise, we must find way to help
-                      planet Earth.
-                    </p>
-                    <div className="text-end">
-                      <a
-                        href="https://www.rainforestcoalition.org/"
-                        className="btn btn-danger"
-                      >
-                        Donate now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              {/* <div class="card mt-3" style="width: 100%;">
-                              <img src="./assets/img/climatechange3.jpg" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                  <h5 class="card-title">Climate Change</h5>
-                                  <p class="card-text">Our world is telling us that things are changing for the worst. As ice caps melt and the heat level around the world rise, we must find way to help planet Earth.</p>
-                                  <div class="text-end">
-                                      <a href="#" class="btn btn-danger">Donate now</a>
-                                  </div>
-                              </div>
-                          </div> */}
             </div>
             <div className="col-2">
               <br />
@@ -522,3 +423,116 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+{
+  /* <div class="card" style="width: 100%;">
+                              <img src="./assets/img/protextafgans.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <h5 class="card-title">Help save Afghans</h5>
+                                <p class="card-text">As the Taliban has breached the capital city of Kabul, thousands of Afghans are fighting to find a way out. Humanitarians and soldiers on the ground are doing what they can, but here is our oppurtunity to help save hundreds of lives. Read more on the efforts to get planes on the ground to bring Afghans to safety. 
+                                </p>
+                                <div class="text-end">
+                                  <a href="#" class="btn btn-danger">Read more</a>
+                                </div>
+                              </div> */
+}
+{
+  /* <div className="my-4">
+                <div className="card mt-3" style={{ width: "100%" }}>
+                  <img src={covidImg1} className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">COVID-19: Global Pandemic</h5>
+                    <p className="card-text">
+                      As we battle our everyday stresses, we are also at war
+                      with a contagion that has sweep across the globe. Medical
+                      workers are working endless hours to help protect us.
+                      Here's how we can help prevent the spread.
+                    </p>
+                    <div className="text-end">
+                      <a href="#" className="btn btn-danger">
+                        Read more
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> */
+}
+{
+  /* <div className="my-4">
+                <div className="card mt-3" style={{ width: "100%" }}>
+                  <img src={haitiImg} className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-title">
+                      Catostophic earthquake struck Haiti
+                    </h5>
+                    <p className="card-text">
+                      Haiti was recently hit by a 7.2 magnitude earthquake
+                      leaving over a thousand Haitians and counting dead. As
+                      rescue efforts are in progress, survivors, many left
+                      without homes and any possesions, are in search of aid,
+                      food, and supplies.
+                    </p>
+                    <div className="text-end">
+                      <a
+                        href="https://www.unicefusa.org/?form=FUNZZFVXQHV"
+                        className="btn btn-danger"
+                      >
+                        Donate now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> */
+}
+{
+  /* <div class="card mt-3" style="width: 100%;">
+                              <img src="./assets/img/covid3.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                  <h5 class="card-title">COVID-19: Global Pandemic</h5>
+                                  <p class="card-text">As we battle our everyday stresses, we are also at war with a contagion that has sweep across the globe. Medical workers are working endless hours to help protect us. Here's how we can help prevent the spread.</p>
+                                  <div class="text-end">
+                                      <a href="#" class="btn btn-danger">Read more</a>
+                                  </div>
+                              </div>
+                          </div> */
+}
+{
+  /* <div className="my-4">
+                <div className="card mt-3" style={{ width: "100%" }}>
+                  <img
+                    src={climateChangeImg}
+                    className="card-img-top"
+                    alt="..."
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">Climate Change</h5>
+                    <p className="card-text">
+                      Our world is telling us that things are changing for the
+                      worst. As ice caps melts, deforestation continues, and the
+                      heat level around the world rise, we must find way to help
+                      planet Earth.
+                    </p>
+                    <div className="text-end">
+                      <a
+                        href="https://www.rainforestcoalition.org/"
+                        className="btn btn-danger"
+                      >
+                        Donate now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> */
+}
+{
+  /* <div class="card mt-3" style="width: 100%;">
+                              <img src="./assets/img/climatechange3.jpg" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                  <h5 class="card-title">Climate Change</h5>
+                                  <p class="card-text">Our world is telling us that things are changing for the worst. As ice caps melt and the heat level around the world rise, we must find way to help planet Earth.</p>
+                                  <div class="text-end">
+                                      <a href="#" class="btn btn-danger">Donate now</a>
+                                  </div>
+                              </div>
+                          </div> */
+}

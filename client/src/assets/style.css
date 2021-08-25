@@ -1,143 +1,142 @@
 /* GLOBAL */
 * {
-    font-family: 'Lato', sans-serif;
-    /* margin-left: 5rem;
+  font-family: "Lato", sans-serif;
+  /* margin-left: 5rem;
     margin-right: 2rem; */
 }
 
-
 hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 /* Nav Bar styles */
 .logoNav {
-    width: 20px;
+  width: 20px;
 }
 
 nav {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
+
 .nav-container {
-    /* margin-left: 144px;
+  /* margin-left: 144px;
     margin-right: 144px; */
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    font-family: 'Montserrat', sans-serif;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+li a {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: rgba(0, 0, 0, 0.55);
 }
 
 .logButton {
-    background-color: #32A7AD;
+  background-color: #32a7ad;
 }
 
 .logOutButton {
-    background-color: #32A7AD;
+  background-color: #32a7ad;
 }
 
 .logButton:hover {
-    background-color: #1a9096;
+  background-color: #1a9096;
 }
 
 .logOutButton:hover {
-    background-color: #1a9096;
+  background-color: #1a9096;
 }
-
 
 /* Log In style*/
 .loginForm {
-    box-shadow: 5px 2px 5px 2px lightgrey;
+  box-shadow: 5px 2px 5px 2px lightgrey;
 }
 
-/* LANDING PAGE */ 
-    /* Jumbotron */
+/* LANDING PAGE */
+/* Jumbotron */
 .jumbotron {
-    padding: 0px 40px 0px 40px; 
+  padding: 0px 40px 0px 40px;
 }
 
 .joinCause {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 .joinCause:hover {
-    background-color: yellow;
+  background-color: yellow;
 }
 .actionContainer {
-    background-color: thistle;
+  background-color: thistle;
 }
 
 .signUpCTA {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .disco {
-    background-color: thistle;
+  background-color: thistle;
 }
 
 .signUpForm {
-    box-shadow: 4px 2px 3px 4px lightgray;
+  box-shadow: 4px 2px 3px 4px lightgray;
 }
 
 /* DASHBOARD PAGE */
 
-
 .mainTweet {
-    color: aqua;
+  color: aqua;
 }
 
 .h5 {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 a {
-    color: #0d6efd;
-    text-decoration: none !important;
+  color: #0d6efd;
+  text-decoration: none !important;
 }
 
 .sb {
-    text-decoration: none;
-    color: aqua;
+  text-decoration: none;
+  color: aqua;
 }
 
 .roundImg {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-
-/* USER POST */ 
+/* USER POST */
 .disclaimer {
-    font-size: 12px;
+  font-size: 12px;
 }
-
 
 /* Footer style*/
 .prefooter {
-    background: #F4F4F4;
+  background: #f4f4f4;
 }
 
 .footMain {
-    color: #32A7AD;
+  color: #32a7ad;
 }
 
 .fab {
-    color: #e34736;
+  color: #e34736;
 }
 .fab:hover {
-    color: #d43b2a;
+  color: #d43b2a;
 }
 
 .sm {
-    text-decoration: none;
-    color: #000000;
+  text-decoration: none;
+  color: #000000;
 }
 
 .footsies {
-    @include media-breakpoint-up(sm) {
-            width: 6rem;
-    }
-}   
-
-
+  @include media-breakpoint-up(sm) {
+    width: 6rem;
+  }
+}
