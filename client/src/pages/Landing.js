@@ -18,11 +18,11 @@ const Landing = () => {
         <div className="mainJumbo mb-5">
           <div className="container jumbo-container">
             <div className="row">
-              <div className="col-1"></div>
-              <div className="col-10">
+              <div className="col-md-1"></div>
+              <div className="col-md-10">
                 <div className="container mt-4">
                   <div className="row">
-                    <div className="col-6">
+                    <div className="col-md-6">
                       <h1 className="display-3">
                         <span className="jumboHead">Beyond Us</span>
                       </h1>
@@ -47,7 +47,7 @@ const Landing = () => {
                         </button>
                       </p>
                     </div>
-                    <div className="col-6">
+                    <div className="col-md-6">
                       <img
                         src={saveChild}
                         className="img-fluid"
@@ -73,8 +73,8 @@ const Landing = () => {
         <div className="missionStatement mt-5 mb-5" id="ourmission">
           <div className="container mission">
             <div className="row">
-              <div className="col-2" />
-              <div className="col-3">
+              <div className="col-md-2" />
+              <div className="col-md-3">
                 <img
                   src={communityImg}
                   className="img-fluid"
@@ -82,7 +82,7 @@ const Landing = () => {
                 />
               </div>
               {/* <div className="d-flex align-items-center"> */}
-              <div className="col-5 d-flex align-items-center">
+              <div className="col-md-5 d-flex align-items-center">
                 {/* <h2>Our Mission</h2> */}
                 <p>
                   <span className="fs-2">Our Mission</span>
@@ -97,7 +97,7 @@ const Landing = () => {
                 </p>
               </div>
               {/* </div> */}
-              <div className="col-1" />
+              <div className="col-md-1" />
             </div>
           </div>
         </div>
@@ -105,8 +105,8 @@ const Landing = () => {
         <div className="actions mt-5 mb-5" id="howtohelp">
           <div className="container actionContainer mt-2 py-4 rounded">
             <div className="row">
-              <div className="col-2" />
-              <div className="col-5 d-flex align-items-center">
+              <div className="col-md-2" />
+              <div className="col-md-5 d-flex align-items-center">
                 <p>
                   <span className="fs-2">How to Help</span>
                   <br />
@@ -115,14 +115,14 @@ const Landing = () => {
                   difference in the world and someone's life.
                 </p>
               </div>
-              <div className="col-3">
+              <div className="col-md-3">
                 <img
                   src={volunteerImg}
                   className="img-fluid"
                   alt="Responsive image"
                 />
               </div>
-              <div className="col-1" />
+              <div className="col-md-1" />
             </div>
           </div>
         </div>
@@ -216,8 +216,8 @@ const Landing = () => {
       <div className="joinUs mt-5 mb-5" id="jointhecause">
         <div className="container joinUsTitle">
           <div className="row">
-            <div className="col-1" />
-            <div className="col-5">
+            <div className="col-md-1" />
+            <div className="col-md-5">
               <h2>Join the Cause</h2>
               <p>
                 Sign up and join everyday heroes around the world to keep up
@@ -235,7 +235,7 @@ const Landing = () => {
             </div>
             {/* <div className="col-1" /> */}
             <SignupForm />
-            <div className="col-1" />
+            <div className="col-md-1" />
           </div>
         </div>
       </div>

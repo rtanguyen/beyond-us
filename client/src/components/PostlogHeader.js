@@ -34,22 +34,22 @@ const PostlogHeader = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item">
+              <li className="nav-item text-center">
                 <Link to={`/home`} className="nav-link">
                   Happening Now
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item text-center">
                 <Link to={`/home`} className="nav-link">
                   Trending
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item text-center">
                 <a className="nav-link" href="#news">
                   News
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item text-center">
                 <Link to={`/add`} className="nav-link">
                   Create
                 </Link>
