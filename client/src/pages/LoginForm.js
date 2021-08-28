@@ -52,8 +52,8 @@ const LoginForm = (props) => {
     <PrelogHeader/>
     <div className="container login">
       <div className="row">
-        <div className="col-4" />
-        <div className="col-4">
+        <div className="col-md-4" />
+        <div className="col-md-4">
           <div className="card card-signin my-5">
             <div className="card-body loginForm">
               <h5 className="card-title text-center fs-2 fw-bold">Sign in</h5>
@@ -117,7 +117,7 @@ const LoginForm = (props) => {
             </div>
           </div>
         </div>
-        <div className="col-4" />
+        <div className="col-md-4" />
       </div>
     </div>
     </>
