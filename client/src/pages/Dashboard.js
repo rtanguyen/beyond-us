@@ -30,20 +30,20 @@ function Dashboard() {
         <div>
           <div className="container postTitles pt-3 pb-3 mb-2 rounded">
             <div className="row">
-              <div className="col-3"></div>
-              <div className="col-7">
+              <div className="col-md-3"></div>
+              <div className="col-md-7">
                 <h3 className=" text-center fw-bolder" id="happeningnow">
                   Happening Now
                 </h3>
               </div>
-              <div className="col-2"></div>
+              <div className="col-md-2"></div>
             </div>
           </div>
         </div>
         {/* Discover */}
         <div className="container">
           <div className="row">
-            <div className="col-3">
+            <div className="col-md-3">
               <div className="container">
                 <h3 className="causes text-center fw-bolder">Discover</h3>
                 <p className="fs-6">Other efforts that require your help</p>
@@ -227,7 +227,7 @@ function Dashboard() {
 
             {/* ==============POSTS============== */}
 
-            <div className="col-7 pl-2 pr-2">
+            <div className="col-md-7 pl-2 pr-2">
               {posts.map((post) => (
                 <div key={post._id}>
                   <div className="card" style={{ width: "100%" }}>
@@ -306,7 +306,7 @@ function Dashboard() {
                 </div>
               ))}
             </div>
-            <div className="col-2">
+            <div className="col-md-2">
               <br />
               <h3 className="causes text-center fw-bolder">Trending</h3>
               <hr />
