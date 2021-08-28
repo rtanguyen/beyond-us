@@ -73,9 +73,9 @@ THEN I am taken back to the Landing page
 ## Technology
 Bootstrap  
 Node.js      
-Mongoose
-MongoDB
-React   
+Mongoose   
+MongoDB   
+React      
 Express.js   
 Cloudinary  
 
