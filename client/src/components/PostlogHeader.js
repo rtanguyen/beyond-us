@@ -9,11 +9,12 @@ const PostlogHeader = () => {
       {/* NAVIGATION */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav px-5">
         <div className="container-fluid nav-container ">
-          <Link to={"/home"}>
+          <Link to={"/home"} className="navbar-brand mainLogo" style={{
+    width: "100px"}}>
             <img
               src={LogoPic}
-              className="logoNav navbar-brand mainLogo"
-              style={{ width: "13%" }}
+              className="logoNav"
+              style={{ width: "50%" }}
             />
           </Link>
           <button
