@@ -87,7 +87,6 @@ This repo is licensed under the MIT License. (https://opensource.org/licenses/MI
 ## Questions
 For any questions, connect with us at    
 [ronniesmail14@gmail.com](mailto:ronniesmail14@gmail.com)  
-[mimzy414@gmail.com](mailto:mimzy414@gmail.com) 
 [Rtanguyen@gmail.com](mailto:Rtanguyen@gmail.com)  
 [mimzy414@gmail.com](mailto:mimzy414@gmail.com)  
 [reetah589@gmail.com](mailto:reetah589@gmail.com)  
