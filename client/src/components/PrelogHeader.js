@@ -20,16 +20,16 @@ const PrelogHeader = () => {
         <div className="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" href="#ourmission">Our Mission</a>
+              <a className="nav-link text-center" href="#ourmission">Our Mission</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#howtohelp">How to Help</a>
+              <a className="nav-link text-center" href="#howtohelp">How to Help</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#jointhecause">Join the Cause</a>
+              <a className="nav-link text-center" href="#jointhecause">Join the Cause</a>
             </li>
+            <button type="button" className="btn btn-outline-light logButton btn-sm login ms-2"><Link to="/login" className="nav-link text-light">Log In</Link></button>
           </ul>
-          <button type="button" className="btn btn-outline-light logButton btn-sm login ms-2"><Link to="/login" className="nav-link text-light">Log In</Link></button>
         </div>
       </div>
     </nav>
