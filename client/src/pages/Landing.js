@@ -82,7 +82,7 @@ const Landing = () => {
                 />
               </div>
               {/* <div className="d-flex align-items-center"> */}
-              <div className="col-5 d-flex align-items-center">
+              <div className="col-md-5 d-flex align-items-center">
                 {/* <h2>Our Mission</h2> */}
                 <p>
                   <span className="fs-2">Our Mission</span>
