@@ -1,21 +1,39 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-
+// import { useMutation } from "@apollo/client";
+// import { DELETE_POST } from "../utils/mutations";
 // import { lineBreak } from "../utils/helpers";
 import { QUERY_POST } from "../utils/queries";
 import CommentForm from "../components/CommentForm";
 import CommentList from "../components/CommentList";
 import PostlogHeader from "../components/PostlogHeader";
-
+import auth from "../utils/auth";
 const Singlepost = (props) => {
   const { id: postId } = useParams();
+  // const [deletePost] = useMutation(DELETE_POST);
   const { loading, data } = useQuery(QUERY_POST, {
     variables: { id: postId },
   });
 
   const post = data?.post || {};
 
+  // const handleDeletePost = async(postsId) => {
+  //   const token = auth.loggedIn() ? auth.getToken() : null;
+
+  //   if (!token) {
+  //     return false;
+  //   }
+  //   try {
+  //     await deletePost({
+  //       variables: {postsId: postsId},
+        
+  //     });
+     
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // }
   console.log(post);
   return (
     <>
@@ -66,6 +84,7 @@ const Singlepost = (props) => {
               </a>
             </div>
           )}
+          
         </div>
       </div>
 

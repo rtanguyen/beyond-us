@@ -57,3 +57,17 @@ export const ADD_POST = gql`
     }
   }
 `;
+
+// export const DELETE_POST = gql`
+//   mutation removePost($postsId: ID!) {
+//     removePost(postsId: $postsId) {
+//       _id
+//       title
+//       subtitle
+//       bodyText
+//       orgLink
+//       image
+//       username
+//     }
+//   }
+// `;
