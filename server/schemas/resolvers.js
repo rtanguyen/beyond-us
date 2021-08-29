@@ -93,16 +93,16 @@ const resolvers = {
       }
       throw new AuthenticationError("You must be logged in to add a comment");
     },
-    removePost: async(parent, { postsId }, context) => {
-      if (context.user) {
-        const updatedUser = await User.findOneAndUpdate(
-          {_id: context.user._id},
-          {$pull: { postDetails: {postsId: postsId} } },
-          { new: true}
-        )
-        return updatedUser;
-      }
-    }
+    // removePost: async(parent, { postsId }, context) => {
+    //   if (context.user) {
+    //     const updatedUser = await User.findOneAndUpdate(
+    //       {_id: context.user._id},
+    //       {$pull: { postDetails: {postsId: postsId} } },
+    //       { new: true}
+    //     )
+    //     return updatedUser;
+    //   }
+    // }
   },
 };
 
