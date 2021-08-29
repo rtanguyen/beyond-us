@@ -93,14 +93,24 @@ const resolvers = {
       }
       throw new AuthenticationError("You must be logged in to add a comment");
     },
-    // removePost: async(parent, { postsId }, context) => {
+    removePost: async(parent, { postsId }, context) => {
+      if (context.user) {
+        const deletedPost = await Posts.findOneAndDelete(
+          { _id: postsId}   
+        )
+        
+        return deletedPost;
+      }
+    },
+    //bradley tried but i gave up
+    //  updateComment: async(parent, { postsId, commentId , commentBody }, context) => {
     //   if (context.user) {
-    //     const updatedUser = await User.findOneAndUpdate(
-    //       {_id: context.user._id},
-    //       {$pull: { postDetails: {postsId: postsId} } },
-    //       { new: true}
+    //     const updatedComment = await Posts.findOneAndUpdate(
+    //       { _id: postsId, "comments._id": commentId },
+    //       {$set: {"comments.commentBody":commentBody } },
+    //       { new: true, safe: true }
     //     )
-    //     return updatedUser;
+    //     return updatedComment;
     //   }
     // }
   },
