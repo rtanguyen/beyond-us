@@ -100,7 +100,7 @@ const LoginForm = (props) => {
                         type="submit"
                       >
                         Log in
-                        {/* <Link to="/dashboard">Login</Link> */}
+                        <Link to="/dashboard">Login</Link>
                       </button>
                     </div>
                   </div>
