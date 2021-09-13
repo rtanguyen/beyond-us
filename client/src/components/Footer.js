@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
           <div className="col-2 footsm footsies">
             <a className="sm" href="#">
-              Fundraiser
+              Fundraise
             </a>
           </div>
           <div className="col-2 footsm footsies">

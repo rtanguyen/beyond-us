@@ -9,12 +9,11 @@ const PostlogHeader = () => {
       {/* NAVIGATION */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top prelogin-nav px-5">
         <div className="container-fluid nav-container ">
-          <Link to={"/home"} className="navbar-brand mainLogo" style={{
-    width: "100px"}}>
+          <Link to={"/home"}>
             <img
               src={LogoPic}
-              className="logoNav"
-              style={{ width: "50%" }}
+              className="logoNav navbar-brand mainLogo"
+              style={{ width: "13%" }}
             />
           </Link>
           <button
@@ -35,22 +34,22 @@ const PostlogHeader = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li className="nav-item text-center">
+              <li className="nav-item">
                 <Link to={`/home`} className="nav-link">
                   Happening Now
                 </Link>
               </li>
-              <li className="nav-item text-center">
+              <li className="nav-item">
                 <Link to={`/home`} className="nav-link">
                   Trending
                 </Link>
               </li>
-              <li className="nav-item text-center">
+              <li className="nav-item">
                 <a className="nav-link" href="#news">
                   News
                 </a>
               </li>
-              <li className="nav-item text-center">
+              <li className="nav-item">
                 <Link to={`/add`} className="nav-link">
                   Create
                 </Link>
