@@ -79,7 +79,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="container col-md-5" id="signup">
+    <div className="container col-5" id="signup">
       <div className="card card-signUp">
         <div className="card-body signUpForm rounded">
           <p className="card-title text-center fs-4 fw-bold createTitle">
