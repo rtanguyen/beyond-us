@@ -1,86 +1,86 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useQuery, useLazyQuery } from '@apollo/client';
-import DatePicker from 'react-datepicker';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useQuery, useLazyQuery } from "@apollo/client";
+import DatePicker from "react-datepicker";
 
-import PostlogHeader from '../components/PostlogHeader';
-import Trending from '../components/Trending';
-import PostForm from './PostForm';
-import DiscoverOrgs from '../components/DiscoverOrgs';
-import FilterPosts from '../components/FilterPosts';
-import PostList from '../components/PostList';
+import PostlogHeader from "../components/PostlogHeader";
+import Trending from "../components/Trending";
+import PostForm from "./PostForm";
+import DiscoverOrgs from "../components/DiscoverOrgs";
+import FilterPosts from "../components/FilterPosts";
+import PostList from "../components/PostList";
 
 // import { QUERY_POSTS, QUERY_POSTS_BASIC } from '../utils/queries';
 
-import afghan1Img from '../assets/protextafgans.jpg';
-import covidImg1 from '../assets/covid3.jpg';
-import haitiImg from '../assets/haiti1.jpg';
-import climateChangeImg from '../assets/climatechange3.jpg';
-import afghanImg2 from '../assets/afghan.jpg';
-import covidImg2 from '../assets/covid2.jpg';
-import haitiImg3 from '../assets/haiti4.jpg';
-import donate from '../assets/donateSeed';
-import postSeed from '../assets/postSeed';
+import afghan1Img from "../assets/protextafgans.jpg";
+import covidImg1 from "../assets/covid3.jpg";
+import haitiImg from "../assets/haiti1.jpg";
+import climateChangeImg from "../assets/climatechange3.jpg";
+import afghanImg2 from "../assets/afghan.jpg";
+import covidImg2 from "../assets/covid2.jpg";
+import haitiImg3 from "../assets/haiti4.jpg";
+import donate from "../assets/donateSeed";
+import postSeed from "../assets/postSeed";
 
 function Dashboard() {
-	const [filters, setFilters] = useState({
-		// location: '',
-		// postType: '',
-		// endDate: '',
-	});
-	// console.log({ filters });
-	// const handleChange = (event) => {
-	// 	//  const { name, value } = event.target.value;
+  const [filters, setFilters] = useState({
+    // location: '',
+    // postType: '',
+    // endDate: '',
+  });
+  // console.log({ filters });
+  // const handleChange = (event) => {
+  // 	//  const { name, value } = event.target.value;
 
-	// 	setFilters({
-	// 		location: event.target.value,
-	// 	});
-	// };
+  // 	setFilters({
+  // 		location: event.target.value,
+  // 	});
+  // };
 
-	// const handleListChange = (event) => {
-	// 	console.log(event.target.textContent);
-	// 	setFilters({
-	// 		// ...newPost,
-	// 		postType: event.target.textContent,
-	// 	});
-	// };
+  // const handleListChange = (event) => {
+  // 	console.log(event.target.textContent);
+  // 	setFilters({
+  // 		// ...newPost,
+  // 		postType: event.target.textContent,
+  // 	});
+  // };
 
-	// const handleDateChange = (date) => {
-	// 	console.log(date);
-	// 	setFilters({
-	// 		// ...newPost,
-	// 		endDate: date,
-	// 	});
-	// };
+  // const handleDateChange = (date) => {
+  // 	console.log(date);
+  // 	setFilters({
+  // 		// ...newPost,
+  // 		endDate: date,
+  // 	});
+  // };
 
-	// const { loading, data } = useQuery(QUERY_POSTS);
-	// const posts = data?.posts || [];
+  // const { loading, data } = useQuery(QUERY_POSTS);
+  // const posts = data?.posts || [];
 
-	return (
-		<>
-			<PostlogHeader />
-			<div>
-				<div>
-					<div className="container postTitles pt-3 pb-3 mb-2 rounded">
-						<div className="row">
-							<div className="col-3"></div>
-							<div className="col-7">
-								<h3 className=" text-center fw-bolder" id="happeningnow">
-									Happening Now
-								</h3>
-							</div>
-							<div className="col-2"></div>
-						</div>
-					</div>
-				</div>
-				{/* Discover */}
-				<div className="container">
-					<div className="row">
-						<DiscoverOrgs />
+  return (
+    <>
+      <PostlogHeader />
+      <div>
+        <div>
+          <div className="container postTitles pt-3 pb-3 mb-2 rounded">
+            <div className="row">
+              <div className="col-3"></div>
+              <div className="col-7">
+                <h3 className=" text-center fw-bolder" id="happeningnow">
+                  Happening Now
+                </h3>
+              </div>
+              <div className="col-2"></div>
+            </div>
+          </div>
+        </div>
+        {/* Discover */}
+        <div className="container">
+          <div className="row">
+            <DiscoverOrgs />
 
-						{/* ==============POSTS============== */}
-						<PostList filters={filters} />
-						{/* <div className="col-7 pl-2 pr-2">
+            {/* ==============POSTS============== */}
+            <PostList filters={filters} />
+            {/* <div className="col-7 pl-2 pr-2">
 							{posts.map((post) => (
 								<div key={post._id}>
 									<div className="card" style={{ width: '100%' }}>
@@ -107,7 +107,7 @@ function Dashboard() {
 								</div>
 							))} */}
 
-						{/* {postSeed.map((post) => (
+            {/* {postSeed.map((post) => (
 								<div key={post._id}>
 									<div className="card" style={{ width: '100%' }}>
 										{post.image && (
@@ -132,7 +132,7 @@ function Dashboard() {
 									</div>
 								</div>
 							))} */}
-						{/* {donate.map((donate) => (
+            {/* {donate.map((donate) => (
 								<div key={donate._id}>
 									<div className="card" style={{ width: '100%' }}>
 										<img
@@ -158,9 +158,9 @@ function Dashboard() {
 								</div>
 							))}
 						</div> */}
-						<div className="col-2">
-							<FilterPosts setFilters={(filters, setFilters)} />
-							{/* <form>
+            <div className="col-2">
+              <FilterPosts setFilters={setFilters} filters={filters} />
+              {/* <form>
 								<h3 className="causes text-center fw-bolder">Filter Posts</h3>
 								<hr />
 								<div className="dropdown mb-3 addPost">
@@ -231,26 +231,26 @@ function Dashboard() {
 								</div>
 							</form> */}
 
-							<br />
-							<Trending />
-						</div>
-					</div>
-				</div>
-				<div className="container mt-4">
-					<div className="row">
-						<div className="discoImages">
-							{/* <img src="./assets/img/community2.jpg" alt="Avatar" class="roundImg"> */}
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	);
+              <br />
+              <Trending />
+            </div>
+          </div>
+        </div>
+        <div className="container mt-4">
+          <div className="row">
+            <div className="discoImages">
+              {/* <img src="./assets/img/community2.jpg" alt="Avatar" class="roundImg"> */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Dashboard;
 {
-	/* {(filteredPosts && (
+  /* {(filteredPosts && (
 								<div>
 									{filteredPosts.map((post) => (
 										<div key={post._id}>
@@ -310,7 +310,7 @@ export default Dashboard;
 							)} */
 }
 {
-	/* <div>
+  /* <div>
 								{' '}
 								{posts.map((post) => (
 									<div key={post._id}>

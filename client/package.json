@@ -14,7 +14,7 @@
     "apollo-boost": "^0.4.7",
     "bootstrap-icons": "^1.5.0",
     "graphql": "^15.5.1",
-    "graphql-tag": "^2.10.3",
+    "graphql-tag": "^2.10.3", 
     "jquery": "^3.6.0",
     "jwt-decode": "^3.1.2",
     "react": "^16.13.1",
