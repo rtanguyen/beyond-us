@@ -5,7 +5,8 @@ const commentSchema = new Schema(
   {
     commentBody: {
       type: String,
-      // required: true,
+      required: true,
+      // minLength: 1,
       maxlength: 280,
     },
     username: {
@@ -15,8 +16,8 @@ const commentSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: timestamp => dateFormat(timestamp)
-    }
+      get: (timestamp) => dateFormat(timestamp),
+    },
   },
   {
     toJSON: {

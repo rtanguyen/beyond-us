@@ -7,12 +7,21 @@ const CommentList = ({ comments }) => {
     <div>
       {comments &&
         comments.map((comment) => (
-          <div key="{comment._id}" className="row">
-            <div className="col-2">
-              <p className="name fw-bold">{comment.username}</p>
-              <p className="date">{comment.createdAt}</p>
+          <div key="{comment._id}">
+            <div className="row mb-4">
+              <div className="col-2">
+                <p className="name fw-bold">{comment.username}</p>
+                <span className="name date align-bottom">
+                  {comment.createdAt}
+                </span>
+              </div>
+              {/* </div>
+            <div className="row"> */}
+              <div className="col-10">
+                {/* <p className="date">{comment.createdAt}</p> */}
+                <p className="name px-2">{comment.commentBody}</p>
+              </div>
             </div>
-            <div className="col-7">{comment.commentBody}</div>
           </div>
         ))}
     </div>
@@ -20,3 +29,11 @@ const CommentList = ({ comments }) => {
 };
 
 export default CommentList;
+
+{
+  /* </div>
+   */
+}
+{
+  /* </div> */
+}

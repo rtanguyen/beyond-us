@@ -155,7 +155,11 @@ const FilterPosts = ({ filters, setFilters }) => {
         {/* <button className="btn btn-danger mx-auto" onSubmit={handleFilter}>
 					Filter
 				</button> */}
-        <button className="btn btn-danger mx-auto" onClick={handleClearFilter}>
+        <button
+          className="btn btn-outline-danger mx-auto"
+          onClick={handleClearFilter}
+        >
+          <i class="bi bi-x-circle px-1" />
           Clear
         </button>
       </div>
