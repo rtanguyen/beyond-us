@@ -44,7 +44,7 @@ const postSchema = new Schema(
     },
     endDate: {
       type: Date,
-      get: (date) => dateFormat(date),
+      get: (timestamp) => dateFormat(timestamp),
     },
     createdAt: {
       type: Date,

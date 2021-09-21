@@ -124,18 +124,22 @@ const Singlepost = (props) => {
       </div>
 
       <div className="container mb-5">
+        <hr className="posthr" />
         <div className="row">
-          <CommentForm postsId={post._id} />
           <div className="col-2"></div>
-        </div>
-        <div className="postedComments container">
-          <div className="row pastComments" id="commentPast">
-            <div className="col-1" />
-            <div className="container">
-              <CommentList comments={post.comments} />
-              <div className="col-1" />
+          <div className="col-8">
+            <CommentForm postsId={post._id} />
+            <div className="postedComments container">
+              <div className="row pastComments" id="commentPast">
+                <div className="col-1" />
+                <div className="container">
+                  <CommentList comments={post.comments} />
+                  <div className="col-1" />
+                </div>
+              </div>
             </div>
           </div>
+          <div className="col-2"></div>
         </div>
       </div>
     </>

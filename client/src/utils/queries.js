@@ -76,6 +76,7 @@ export const QUERY_POST = gql`
         _id
         commentBody
         username
+        createdAt
       }
     }
   }

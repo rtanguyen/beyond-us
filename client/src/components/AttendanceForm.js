@@ -29,23 +29,27 @@ const AttendanceForm = ({ postsId, location, endDate, attendanceCount }) => {
       <div className="card-body mx-auto">
         {/* <div className="row"> */}
 
-        <div className=" text-end">
-          <i className="fas fa-calendar-alt card-text" id="endDate"></i>
-          <p className=" text-end postDetails card-text px-1" id="endDate">
-            {endDate} <br />
-            {/* {location} */}
-          </p>
-        </div>
-        <div className=" text-end mb-2">
-          <p className=" text-end postDetails card-text px-1" id="endDate">
-            {location}
-          </p>
-        </div>
+        {endDate && (
+          <div className=" text-end">
+            <i className="fas fa-calendar-alt card-text" id="endDate"></i>
+            <p className=" text-end postDetails card-text px-1" id="endDate">
+              {endDate} <br />
+            </p>
+          </div>
+        )}
+        {location && (
+          <div className=" text-end mb-2">
+            <p className=" text-end postDetails card-text px-1" id="endDate">
+              {location}
+            </p>
+          </div>
+        )}
       </div>
       <div className="card-footer text-center">
         <p className="card-text">
-          {attendanceCount}{" "}
-          {attendanceCount ? "attending" : "be the first to sign up!"}
+          {attendanceCount
+            ? `${attendanceCount} attending`
+            : "be the first to sign up!"}
           {/* ||
                               {post.attendanceCount
                                  ? 'attendees'

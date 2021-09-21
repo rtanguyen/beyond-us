@@ -7,6 +7,7 @@ const CommentForm = ({ postsId }) => {
   const [commentBody, setBody] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
 
+  console.log("commentBody", commentBody);
   const [addComment, { error }] = useMutation(ADD_COMMENT);
 
   const handleChange = (event) => {
@@ -18,7 +19,7 @@ const CommentForm = ({ postsId }) => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    console.log(commentBody);
+    console.log(error);
     try {
       const { data } = await addComment({
         variables: { commentBody, postsId },
@@ -32,9 +33,9 @@ const CommentForm = ({ postsId }) => {
 
   return (
     <div className="container mb-5">
-      <hr />
+      {/* <hr /> */}
       <h4 className="pt-4">Comments</h4>
-      <div className="row">
+      <div className="row justify-content-center">
         {/* <div class="col-1"></div> */}
         <div className="mb-3 commentBox col-10">
           <form onSubmit={handleFormSubmit}>
@@ -49,12 +50,22 @@ const CommentForm = ({ postsId }) => {
               id="comment"
               name="commentBody"
               onChange={handleChange}
+              value={commentBody}
             />
-            <button className="btn d-block w-100" type="submit">
-              Submit
-            </button>
           </form>
         </div>
+        <div className="col-2">
+          <button
+            type="submit"
+            className="btn btn-outline-light commentBtn btn-sm login d-flex w-100 justify-content-center"
+          >
+            Submit
+          </button>
+        </div>
+
+        {/* <button className="btn d-block w-100" type="submit">
+              Submit
+            </button> */}
       </div>
     </div>
   );
