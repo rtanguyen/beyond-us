@@ -5,6 +5,8 @@ import { useQuery, useLazyQuery } from "@apollo/client";
 import { QUERY_POSTS_BASIC } from "../utils/queries";
 
 const PostList = ({ filters }) => {
+  let [error, setError] = useState(false);
+  let [nullResults, setNullResults] = useState(false);
   const { location, postType, endDate } = filters;
   // const filterArr = filters.entries();
   const { loading, data } = useQuery(QUERY_POSTS_BASIC);
@@ -13,16 +15,16 @@ const PostList = ({ filters }) => {
   console.log("location", location);
   console.log("both", postType, location);
 
-  function filterPosts() {
+  if (!posts.length) {
+    return <p>No posts found.</p>;
+  }
+
+  // function filterPosts() {
+  const filterPosts = () => {
     if (Object.keys(filters).length === 0) {
-      console.log(posts);
       return posts;
+      // return <p>No posts found.</p>;
     }
-    // else {
-    //    posts.filter((post) => {
-    //       if(!postType)
-    //    }
-    // }
     if (location && postType) {
       return posts.filter(
         (post) =>
@@ -33,20 +35,38 @@ const PostList = ({ filters }) => {
     if (location) {
       return posts.filter((post) => post.location === filters.location);
     }
+
     if (postType) {
       return posts.filter((post) => post.postType === filters.postType);
     }
+  };
 
-    // if(endDate) {
-    //    posts.filter((post) => post.endDate === filters.endDate);
-    // }
+  console.log("FILTERED", filterPosts());
+  // let noPosts = () => {
+  //   // await filterPosts();
+  //   console.log(filterPosts().length);
+  //   console.log(error);
+  //   if (!filterPosts().length) {
+  //     setError(true);
+  //     console.log(error);
+  //   }
+  // };
 
-    // return posts.filter((post) => post.postType === filters.postType);
-  }
+  // let testPosts = async () => {
+  //   await filterPosts();
+  //   if (filterPosts().length) {
+  //     console.log("hoooooi");
+  //     return <p> posts found.</p>;
+  //   }
+  // };
+
+  // console.log("NOPOSTS", noPosts());
+  // console.log("POSTS~", testPosts());
 
   return (
     <div className="col-7 pl-2 pr-2">
       {/* {posts.map((post) => ( */}
+      {error && <h3> No posts found.</h3>}
       {filterPosts().map((post) => (
         <div key={post._id}>
           <div className="card" style={{ width: "100%" }}>

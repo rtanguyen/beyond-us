@@ -144,13 +144,13 @@ const FilterPosts = ({ filters, setFilters }) => {
           </ul>
         </div>
       </div>
-      <div className="mb-3 datepicker_main">
+      {/* <div className="mb-3 datepicker_main">
         Event Date
         <DatePicker
           selected={filterValue.endDate}
           onChange={handleDateChange}
         />
-      </div>
+      </div> */}
       <div className="text-center">
         {/* <button className="btn btn-danger mx-auto" onSubmit={handleFilter}>
 					Filter
