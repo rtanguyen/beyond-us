@@ -52,20 +52,16 @@ const CommentForm = ({ postsId }) => {
               onChange={handleChange}
               value={commentBody}
             />
+            <div className="col-2">
+              <button
+                type="submit"
+                className="btn btn-outline-light commentBtn btn-sm login d-flex w-100 justify-content-center"
+              >
+                Submit
+              </button>
+            </div>
           </form>
         </div>
-        <div className="col-2">
-          <button
-            type="submit"
-            className="btn btn-outline-light commentBtn btn-sm login d-flex w-100 justify-content-center"
-          >
-            Submit
-          </button>
-        </div>
-
-        {/* <button className="btn d-block w-100" type="submit">
-              Submit
-            </button> */}
       </div>
     </div>
   );
